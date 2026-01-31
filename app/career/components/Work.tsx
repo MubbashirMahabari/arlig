@@ -1,0 +1,97 @@
+import { Box, Container, Grid, Typography } from "@mui/material";
+import React from "react";
+import icon_1 from "../../../public/assets/expertise/social-network.png";
+import icon_2 from "../../../public/assets/expertise/implementation.png";
+import Image from "next/image";
+
+export default function Work() {
+  const work_data = [
+    {
+      id: 1,
+      img: icon_1,
+      title: "Collaborative by Design",
+      desc: "We believe great ideas come from teams that listen, challenge, and build together.",
+    },
+    {
+      id: 2,
+      img: icon_2,
+      title: "Learning Never Stops",
+      desc: "Salesforce evolves fast — and so do we. Growth and curiosity drive our culture.",
+    },
+    {
+      id: 3,
+      img: icon_2,
+      title: "Global Perspective",
+      desc: "With teams across regions, we value diversity of thought and shared ambition.",
+    },
+  ];
+  return (
+    <Box sx={{ backgroundColor: "#3BAFDA0A", padding: "40px 0" }}>
+      <Container maxWidth="xl">
+        <Box
+          sx={{
+            textAlign: "center",
+            padding: "10px 15px",
+            backgroundColor: "#E0E0E0",
+            borderRadius: "30px",
+            border: "#E8E8E8 solid 1px",
+            display: "inline-block",
+          }}
+        >
+          <Typography sx={{ fontSize: "14px" }}>Our Values</Typography>
+        </Box>
+        <Box sx={{ marginTop: "20px" }}>
+          <Typography sx={{ fontSize: "40px", fontWeight: "700" }}>
+            How We Work
+          </Typography>
+        </Box>
+        <Box sx={{ marginTop: "30px", padding: { xs: "0px", md: "0px 0px" } }}>
+          <Grid
+            container
+            spacing={{ xs: 2, md: 3 }}
+            columns={{ xs: 4, sm: 8, md: 12 }}
+          >
+            {work_data.map((item) => (
+              <Grid key={item.id} size={{ xs: 12, sm: 4, md: 4 }}>
+                <Box
+                  sx={{
+                    gap: 2,
+                    p: 3,
+                    border: "1px solid #e5e7eb",
+                    borderRadius: "30px",
+                    backgroundColor: "#fff",
+                    height: "100%",
+                    transition: "all 0.3s ease",
+                    cursor: "pointer",
+                    "&:hover": {
+                      transform: "scale(1.05)",
+                      boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+                    },
+                  }}
+                >
+                  <Box sx={{ mb: 2 }}>
+                    <Image
+                      src={item.img}
+                      alt={String(item.title)}
+                      width={48}
+                      height={48}
+                    />
+                  </Box>
+
+                  <Box>
+                    <Typography sx={{ fontWeight: 700, color: "#1f2937" }}>
+                      {item.title}
+                    </Typography>
+                    <Typography sx={{ color: "#4b5563", mt: 0.5 }}>
+                      {item.desc}
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </Container>
+    </Box>
+  );
+}
