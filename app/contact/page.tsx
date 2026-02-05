@@ -8,9 +8,9 @@ import Background from "./components/Background";
 import BuildSalesforce from "./components/BuildSalesforce";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Arlig Technologies | Salesforce Consultation",
   description:
-    "Get in touch with Arlig. We are here to answer your questions and help you find the right solutions for your business needs.",
+    "Book a complimentary strategy session with our Salesforce experts. Solutions for implementation, optimization, and managed services.",
 };
 
 export default function Contact() {

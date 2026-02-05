@@ -9,9 +9,10 @@ import Solution from "./components/Solution";
 import Simplify from "./components/Simplify";
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Salesforce Consulting Services",
   description:
-    "Explore Arlig's wide range of services including implementation, innovation, and sustaining solutions designed to help your business grow.",
+    "Comprehensive Salesforce Consulting Services: Implementation, Innovation, and Sustaining support for Sales, Service, and Data Cloud platforms.",
+  keywords: ["Salesforce Consulting", "Salesforce Implementation", "Managed Services", "Salesforce Innovation"],
 };
 
 export default function Services() {

@@ -6,7 +6,7 @@ export default function Connect() {
   return (
     <Box
       sx={{
-        marginTop: "30px",
+        marginTop: "50px",
         paddingBottom: "40px",
       }}
     >

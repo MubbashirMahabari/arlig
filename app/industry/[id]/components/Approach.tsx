@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import { Box, Container, Typography, Grid, Button } from "@mui/material";
-import icon_1 from "../../../../public/assets/expertise/social-network.png";
-import icon_2 from "../../../../public/assets/expertise/implementation.png";
-import icon_3 from "../../../../public/assets/expertise/collaborate.png";
+import icon_1 from "../../../../public/assets/icons/like-shapes.png";
+import icon_2 from "../../../../public/assets/icons/like-shapes.png";
+import icon_3 from "../../../../public/assets/icons/like-shapes.png";
 
 export default function Approach() {
   const approach_data = [

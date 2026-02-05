@@ -1,10 +1,10 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
-import icon_1 from "../../../public/assets/expertise/social-network.png";
-import icon_2 from "../../../public/assets/expertise/implementation.png";
-import icon_3 from "../../../public/assets/expertise/collaborate.png";
-import icon_4 from "../../../public/assets/expertise/staff-management.png";
+import icon_1 from "../../../public/assets/icons/icon_1.png";
+import icon_2 from "../../../public/assets/icons/icon_2.png";
+import icon_3 from "../../../public/assets/icons/icon_3.png";
+import icon_4 from "../../../public/assets/icons/icon_4.png";
 
 export default function Defines() {
   const defines_data1 = [

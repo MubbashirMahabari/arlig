@@ -33,11 +33,11 @@ export default function Page() {
 
   return (
     <div>
-     <Hero industry={industry}/>
-     <Challenges/>
-     <Approach/>
-     <Results/>
-     <Success industry={industry}/>
+      <Hero industry={industry} />
+      <Challenges />
+      <Approach />
+      <Results />
+      <Success industry={industry} />
     </div>
   );
 }

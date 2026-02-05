@@ -2,12 +2,13 @@ import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import heroImage from "../../../public/assets/home-hero.png";
+import Link from "next/link";
 
 export default function Hero() {
   return (
     <Box
       className="hero-section"
-      sx={{ backgroundColor: "#3BAFDA0A", padding: "40px 0" }}
+      sx={{ backgroundColor: "#3BAFDA0A", padding: { xs: "40px 0px", md: "40px 20px" } }}
     >
       <Container maxWidth="xl">
         <Box sx={{ height: "50%" }}>
@@ -25,21 +26,14 @@ export default function Hero() {
                     sx={{
                       fontSize: { xs: "40px", md: "65px" },
                       fontWeight: 700,
-                      lineHeight: 1.1,
+                      lineHeight: 1.2,
                       color: "#2E2E2E",
                     }}
                   >
-                    Transform Your Business With
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontSize: { xs: "40px", md: "65px" },
-                      fontWeight: 700,
-                      lineHeight: 1.1,
-                      color: "#1F4ED8",
-                    }}
-                  >
-                    Salesforce Expertise.
+                    Transform Your Business With{" "}
+                    <Box component="span" sx={{ color: "#1F4ED8", display: "block" }}>
+                      Salesforce Expertise.
+                    </Box>
                   </Typography>
                   <Typography
                     sx={{
@@ -79,17 +73,19 @@ export default function Hero() {
                       },
                     }}
                   >
-                    <Button
-                      sx={{
-                        textTransform: "none",
-                        color: "white",
-                        textAlign: "center",
-                        width: "100%",
-                        alignContent: "center",
-                      }}
-                    >
-                      <Typography>Schedule a Free Strategy Call</Typography>
-                    </Button>
+                    <Link href="/contact" style={{ textDecoration: "none" }}>
+                      <Button
+                        sx={{
+                          textTransform: "none",
+                          color: "white",
+                          textAlign: "center",
+                          width: "100%",
+                          alignContent: "center",
+                        }}
+                      >
+                        <Typography>Schedule a Free Strategy Call</Typography>
+                      </Button>
+                    </Link>
                   </Box>
 
                   <Box
@@ -109,19 +105,21 @@ export default function Hero() {
                       },
                     }}
                   >
-                    <Button
-                      sx={{
-                        textTransform: "none",
-                        color: "#1F4ED8",
-                        textAlign: "center",
-                        width: "100%",
-                        alignContent: "center",
-                      }}
-                    >
-                      <Typography sx={{ fontWeight: "500" }}>
-                        Explore Our Solutions
-                      </Typography>
-                    </Button>
+                    <Link href="/services" style={{ textDecoration: "none" }} >
+                      <Button
+                        sx={{
+                          textTransform: "none",
+                          color: "#1F4ED8",
+                          textAlign: "center",
+                          width: "100%",
+                          alignContent: "center",
+                        }}
+                      >
+                        <Typography sx={{ fontWeight: "500" }}>
+                          Explore Our Solutions
+                        </Typography>
+                      </Button>
+                    </Link>
                   </Box>
                 </Box>
               </Box>

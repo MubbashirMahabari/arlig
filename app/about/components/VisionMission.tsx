@@ -2,8 +2,8 @@ import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import businessStrategy from "../../../public/assets/about/business_strategy.jpg";
-import icon_1 from "../../../public/assets/expertise/social-network.png";
-import icon_2 from "../../../public/assets/expertise/implementation.png";
+import icon_1 from "../../../public/assets/icons/chart.png";
+import icon_2 from "../../../public/assets/icons/cup.png";
 
 export default function VisionMission() {
   const vision_mission = [

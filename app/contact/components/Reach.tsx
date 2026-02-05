@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import icon_1 from "../../../public/assets/expertise/social-network.png";
-import icon_2 from "../../../public/assets/expertise/implementation.png";
-import icon_3 from "../../../public/assets/expertise/collaborate.png";
+import icon_1 from "../../../public/assets/icons/like-shapes.png";
+import icon_2 from "../../../public/assets/icons/magic-star.png";
+import icon_3 from "../../../public/assets/icons/microscope.png";
 import Image from "next/image";
 
 export default function Reach() {

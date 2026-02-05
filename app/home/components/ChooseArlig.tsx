@@ -21,20 +21,21 @@ export default function ChooseArlig() {
       title: "Years of Salesforce Expertise",
       desc: "10+ Countries",
     },
-  ];
-  const feature_data2 = [
     {
-      id: 1,
+      id: 3,
       count: "40+",
       title: "Partners",
       desc: "Salesforce Ridge Partner",
     },
     {
-      id: 2,
+      id: 4,
       count: "75+",
       title: "Certifications",
       desc: "Certification across Salesforce Products",
     },
+  ];
+  const feature_data2 = [
+    
   ];
   return (
     <Box sx={{ backgroundColor: "#3BAFDA0A", padding: "40px 0" }}>
@@ -45,36 +46,8 @@ export default function ChooseArlig() {
             spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
-            <Grid size={{ xs: 12, sm: 4, md: 6 }}>
-              <Box sx={{ width: "100%" }}>
-                <Box sx={{ marginTop: "10px" }}>
-                  <Typography
-                    sx={{
-                      fontSize: "40px",
-                      fontWeight: "700",
-                      color: "#2E2E2E",
-                    }}
-                  >
-                    Why Choose
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontSize: '40px',
-                      fontWeight: "700",
-                      color: "#2E2E2E",
-                    }}
-                  >
-                    Arlig Technologies?
-                  </Typography>
-                </Box>
-                <Image
-                  src={arligLogo}
-                  alt="logo"
-                  style={{ width: "100%", opacity: "0.1" }}
-                />
-              </Box>
-            </Grid>
-            <Grid size={{ xs: 12, sm: 4, md: 6 }}>
+
+            <Grid size={{ xs: 12, sm: 6, md: 12 }}>
               <Box
                 sx={{
                   marginTop: "0px",
@@ -88,20 +61,21 @@ export default function ChooseArlig() {
                   columns={{ xs: 4, sm: 8, md: 12 }}
                 >
                   {feature_data1.map((item) => (
-                    <Grid key={item.id} size={{ xs: 12, sm: 12, md: 6 }}>
+
+
+                    <Grid key={item.id} size={{ xs: 12, sm: 12, md: 3 }}>
                       <Box
                         sx={{
-                          gap: 2,
-                          borderRadius: "12px",
-                          backgroundColor: "transparent",
-                          height: "100%",
-                          transition: "all 0.3s ease",
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: { xs: "center", md: "flex-start" },
+                          textAlign: { xs: "center", md: "left" },
                         }}
                       >
                         <Box>
                           <Typography
                             sx={{
-                              fontSize: "90px",
+                              fontSize: "70px",
                               fontWeight: "700",
                               color: "#2E2E2E",
                             }}
@@ -115,13 +89,13 @@ export default function ChooseArlig() {
                             sx={{
                               textAlign: "center",
                               padding: "5px",
-                              border: "#1F4ED8 2px solid",
+                              border: "#1F4ED8 1px solid",
                               borderRadius: "30px",
                               marginBottom: "20px",
                             }}
                           >
                             <Typography
-                              sx={{ fontWeight: 700, color: "#1F4ED8" }}
+                              sx={{ fontWeight: 500, color: "#1F4ED8" }}
                             >
                               {item.title}
                             </Typography>
@@ -129,10 +103,10 @@ export default function ChooseArlig() {
 
                           <Typography
                             sx={{
-                              fontSize: "20px",
+                              fontSize: "18px",
                               color: "#6B7280",
                               mt: "10px",
-                              fontWeight: "500",
+                              fontWeight: "400",
                             }}
                           >
                             {item.desc}
@@ -142,69 +116,7 @@ export default function ChooseArlig() {
                     </Grid>
                   ))}
                 </Grid>
-                <Box sx={{ marginTop: "40px" }}>
-                  {/* grid 2 sesction */}
-                  <Grid
-                    container
-                    spacing={{ xs: 2, md: 3 }}
-                    columns={{ xs: 4, sm: 8, md: 12 }}
-                  >
-                    {feature_data2.map((item) => (
-                      <Grid key={item.id} size={{ xs: 12, sm: 12, md: 6 }}>
-                        <Box
-                          sx={{
-                            gap: 2,
 
-                            borderRadius: "12px",
-                            backgroundColor: "transparent",
-                            height: "100%",
-                            transition: "all 0.3s ease",
-                          }}
-                        >
-                          <Box>
-                            <Typography
-                              sx={{
-                                fontSize: "90px",
-                                fontWeight: "700",
-                                color: "#2E2E2E",
-                              }}
-                            >
-                              {item.count}
-                            </Typography>
-                          </Box>
-
-                          <Box>
-                            <Box
-                              sx={{
-                                textAlign: "center",
-                                padding: "5px",
-                                border: "#1F4ED8 2px solid",
-                                borderRadius: "30px",
-                                marginBottom: "5px",
-                              }}
-                            >
-                              <Typography
-                                sx={{ fontWeight: 700, color: "#1F4ED8" }}
-                              >
-                                {item.title}
-                              </Typography>
-                            </Box>
-                            <Typography
-                              sx={{
-                                fontSize: "18px",
-                                color: "#6B7280",
-                                mt: "10px",
-                                fontWeight: "500",
-                              }}
-                            >
-                              {item.desc}
-                            </Typography>
-                          </Box>
-                        </Box>
-                      </Grid>
-                    ))}
-                  </Grid>
-                </Box>
               </Box>
             </Grid>
           </Grid>

@@ -7,9 +7,9 @@ import HireForm from "./components/HireForm";
 import Connect from "./components/Connect";
 
 export const metadata: Metadata = {
-  title: "Careers",
+  title: "Careers at Arlig Technologies | Salesforce Jobs",
   description:
-    "Join the Arlig team. Explore career opportunities and be part of an innovative and growing company dedicated to excellence.",
+    "Join a top-tier Salesforce Consulting firm. We're hiring Architects, Developers, and Consultants to build the future of enterprise tech.",
 };
 
 export default function Career() {

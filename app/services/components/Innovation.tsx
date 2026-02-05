@@ -128,17 +128,19 @@ export default function Innovation() {
                     },
                   }}
                 >
-                  <Button
-                    sx={{
-                      textTransform: "none",
-                      color: "white",
-                      textAlign: "center",
-                      width: "100%",
-                      alignContent: "center",
-                    }}
-                  >
-                    <Typography>Talk to a Salesforce Expert</Typography>
-                  </Button>
+                  <Link href='/contact' style={{ textDecoration: 'none' }}>
+                    <Button
+                      sx={{
+                        textTransform: "none",
+                        color: "white",
+                        textAlign: "center",
+                        width: "100%",
+                        alignContent: "center",
+                      }}
+                    >
+                      <Typography>Talk to a Salesforce Expert</Typography>
+                    </Button>
+                  </Link>
                 </Box>
 
                 <Box
@@ -158,6 +160,7 @@ export default function Innovation() {
                     },
                   }}
                 >
+                  <Link href='/blog' style={{ textDecoration: 'none' }} >
                   <Button
                     sx={{
                       textTransform: "none",
@@ -171,6 +174,7 @@ export default function Innovation() {
                       Explore Case Studies
                     </Typography>
                   </Button>
+                  </Link>
                 </Box>
               </Box>
             </Grid>

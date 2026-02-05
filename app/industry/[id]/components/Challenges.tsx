@@ -6,25 +6,25 @@ export default function Challenges() {
   const challenges_data = [
     {
       id: 1,
-      img: "/assets/expertise/social-network.png",
+      img: "/assets/icons/icon_1.png",
       title: "Disconnected Campaign Data",
       desc: "Media teams often work in silos using different tools, leading to fragmented visibility and data loss across campaigns and client touchpoints.",
     },
     {
       id: 2,
-      img: "/assets/expertise/implementation.png",
+      img: "/assets/icons/icon_2.png",
       title: "Manual Approval Cycles",
       desc: "Campaign proposals and budgets often pass through multiple email threads, slowing execution timelines and reducing competitive advantage.",
     },
     {
       id: 3,
-      img: "/assets/expertise/collaborate.png",
+      img: "/assets/icons/icon_3.png",
       title: "Inconsistent Client Visibility",
       desc: "Sales, finance, and delivery teams lack a single source of truth — making renewals and performance tracking inefficient.",
     },
     {
       id: 4,
-      img: "/assets/expertise/staff-management.png",
+      img: "/assets/icons/icon_4.png",
       title: "Limited Performance Insights",
       desc: "Campaign ROI and client profitability analysis happens manually, preventing real-time optimization and strategic decision-making.",
     },

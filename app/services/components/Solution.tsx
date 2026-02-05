@@ -5,6 +5,7 @@ import icon_1 from "../../../public/assets/blogs/blog_1.jpg";
 import icon_2 from "../../../public/assets/blogs/blog_2.jpg";
 import icon_3 from "../../../public/assets/blogs/blog_3.jpg";
 import EastIcon from "@mui/icons-material/East";
+import Link from "next/link";
 
 export default function Solution() {
   const solution_data = [
@@ -143,6 +144,7 @@ export default function Solution() {
                         },
                       }}
                     >
+                      <Link href="/blog" style={{ textDecoration: "none" }} >
                       <Button
                         sx={{
                           textTransform: "none",
@@ -164,6 +166,7 @@ export default function Solution() {
                           <EastIcon sx={{ color: "#003880" }} />
                         </Box>
                       </Button>
+                      </Link>
                     </Box>
                   </Box>
                 </Box>

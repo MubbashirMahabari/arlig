@@ -29,6 +29,7 @@ export default function Hero({ industry }: HeroProps) {
                 {/* large text */}
                 <Box>
                   <Typography
+                    component="h1"
                     sx={{
                       fontSize: { xs: "40px", md: "65px" },
                       fontWeight: 700,
@@ -36,18 +37,10 @@ export default function Hero({ industry }: HeroProps) {
                       color: "#2E2E2E",
                     }}
                   >
-                    Salesforce Solutions
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontSize: { xs: "40px", md: "65px" },
-                      fontWeight: 700,
-                      lineHeight: 1.1,
-                      color: "#2E2E2E",
-                    }}
-                  >
-                    for{" "}
-                    <span style={{ color: "#1F4ED8" }}>{industry.title}</span>
+                    Salesforce Solutions{" "}
+                    <Box component="span" sx={{ display: "block" }}>
+                      for <span style={{ color: "#1F4ED8" }}>{industry.title}</span>
+                    </Box>
                   </Typography>
 
                   <Typography
@@ -79,21 +72,23 @@ export default function Hero({ industry }: HeroProps) {
                     },
                   }}
                 >
-                  <Button
-                    sx={{
-                      textTransform: "none",
-                      color: "white",
-                      textAlign: "center",
-                      width: "100%",
-                      alignContent: "center",
-                    }}
-                  >
-                    <Link href="/" style={{ textDecoration: "none" }}>
-                      <Typography sx={{ fontWeight: "400", color: "#fff" }}>
-                        Talk to an Expert
-                      </Typography>
-                    </Link>
-                  </Button>
+                  <Link href='/contact' style={{ textDecoration: "none" }}>
+                    <Button
+                      sx={{
+                        textTransform: "none",
+                        color: "white",
+                        textAlign: "center",
+                        width: "100%",
+                        alignContent: "center",
+                      }}
+                    >
+                      <Link href="#" style={{ textDecoration: "none" }}>
+                        <Typography sx={{ fontWeight: "400", color: "#fff" }}>
+                          Talk to an Expert
+                        </Typography>
+                      </Link>
+                    </Button>
+                  </Link>
                 </Box>
               </Box>
             </Grid>

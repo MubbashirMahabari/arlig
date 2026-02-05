@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import icon_1 from "../../../public/assets/expertise/social-network.png";
-import icon_2 from "../../../public/assets/expertise/implementation.png";
+import icon_1 from "../../../public/assets/icons/like-shapes.png";
+import icon_2 from "../../../public/assets/icons/magic-star.png";
+import icon_3 from "../../../public/assets/icons/microscope.png";
+
 
 
 export default function Sustaining() {
@@ -21,7 +23,7 @@ export default function Sustaining() {
     },
     {
       id: 3,
-      img: icon_2,
+      img: icon_3,
       title: "Advisory",
       desc: "Reviews, optimization, and long-term Salesforce strategy.",
     },
@@ -86,7 +88,6 @@ export default function Sustaining() {
                     backgroundColor: "#0B1F33",
                     height: "100%",
                     transition: "all 0.3s ease",
-                    cursor: "pointer",
                     "&:hover": {
                       transform: "scale(1.05)",
                       boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
@@ -99,6 +100,7 @@ export default function Sustaining() {
                       alt={String(item.title)}
                       width={48}
                       height={48}
+                      style={{ backgroundColor: "#fff", borderRadius: "30px", padding: "5px" }}
                     />
                   </Box>
 

@@ -1,7 +1,9 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import icon_1 from "../../../public/assets/expertise/social-network.png";
-import icon_2 from "../../../public/assets/expertise/implementation.png";
+import icon_1 from "../../../public/assets/icons/icon_1.png";
+import icon_2 from "../../../public/assets/icons/icon_2.png";
+import icon_3 from "../../../public/assets/icons/icon_3.png";
+
 import Image from "next/image";
 
 export default function Work() {
@@ -20,7 +22,7 @@ export default function Work() {
     },
     {
       id: 3,
-      img: icon_2,
+      img: icon_3,
       title: "Global Perspective",
       desc: "With teams across regions, we value diversity of thought and shared ambition.",
     },

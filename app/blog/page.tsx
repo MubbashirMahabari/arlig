@@ -5,9 +5,9 @@ import Exprience from "./components/Exprience";
 import Advantage from "./components/Advantage";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Salesforce Insights & Case Studies | Arlig Resources",
   description:
-    "Read the latest insights, trends, and updates from Arlig. Stay informed about the industry and our latest achievements.",
+    "Expert insights on Salesforce trends, successful implementation case studies, and digital transformation guides.",
 };
 
 export default function Blog() {

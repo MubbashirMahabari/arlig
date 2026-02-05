@@ -93,11 +93,10 @@ export default function Experience() {
                 <Grid key={item.id} size={{ xs: 12, sm: 4, md: 4 }}>
                   <Box
                     sx={{
-                      gap: 4,
+                      gap: 6,
                       borderRadius: "12px",
-                      height: "100%",
+                      height: { xs: "100%", sm: "100%", md: "460px" },
                       transition: "all 0.3s ease",
-                      cursor: "pointer",
                       "&:hover": {
                         transform: "scale(1.05)",
                       },
@@ -124,14 +123,20 @@ export default function Experience() {
                       <Typography
                         sx={{
                           marginTop: "20px",
-                          lineHeight: "30px",
+                          lineHeight: "32px",
                           fontWeight: 500,
                           color: "#2E2E2E",
                           fontSize: "24px",
+
+                          display: "-webkit-box",
+                          WebkitLineClamp: 3,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
                         }}
                       >
                         {item.title}
                       </Typography>
+
                       <Typography
                         sx={{
                           marginTop: "20px",

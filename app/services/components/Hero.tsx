@@ -2,6 +2,7 @@ import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import heroImage from "../../../public/assets/services/service_hero.jpg";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -24,23 +25,18 @@ export default function Hero() {
                       fontWeight: 700,
                       lineHeight: 1.1,
                       color: "#2E2E2E",
+                      marginBottom: "10px",
                     }}
                   >
-                    Transform Your Business
+                    Salesforce Consulting{" "}
+                    <Box component="span" sx={{ color: "#1F4ED8", display: "block" }}>
+                      Services
+                    </Box>
                   </Typography>
                   <Typography
+                    component="p"
                     sx={{
-                      fontSize: { xs: "40px", md: "65px" },
-                      fontWeight: 700,
-                      lineHeight: 1.1,
-                      color: "#1F4ED8",
-                    }}
-                  >
-                    with Salesforce
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontSize: { xs: "40px", md: "65px" },
+                      fontSize: { xs: "30px", md: "50px" },
                       fontWeight: 700,
                       lineHeight: 1.1,
                       color: "#2E2E2E",
@@ -88,17 +84,19 @@ export default function Hero() {
                       },
                     }}
                   >
-                    <Button
-                      sx={{
-                        textTransform: "none",
-                        color: "white",
-                        textAlign: "center",
-                        width: "100%",
-                        alignContent: "center",
-                      }}
-                    >
-                      <Typography>Talk to a Salesforce Expert</Typography>
-                    </Button>
+                    <Link href="/contact" style={{ textDecoration: "none" }}>
+                      <Button
+                        sx={{
+                          textTransform: "none",
+                          color: "white",
+                          textAlign: "center",
+                          width: "100%",
+                          alignContent: "center",
+                        }}
+                      >
+                        <Typography>Talk to a Salesforce Expert</Typography>
+                      </Button>
+                    </Link>
                   </Box>
 
                   <Box
@@ -118,19 +116,21 @@ export default function Hero() {
                       },
                     }}
                   >
-                    <Button
-                      sx={{
-                        textTransform: "none",
-                        color: "#1F4ED8",
-                        textAlign: "center",
-                        width: "100%",
-                        alignContent: "center",
-                      }}
-                    >
-                      <Typography sx={{ fontWeight: "500" }}>
-                        Explore Case Studies
-                      </Typography>
-                    </Button>
+                    <Link href="/blog" style={{ textDecoration: "none" }} >
+                      <Button
+                        sx={{
+                          textTransform: "none",
+                          color: "#1F4ED8",
+                          textAlign: "center",
+                          width: "100%",
+                          alignContent: "center",
+                        }}
+                      >
+                        <Typography sx={{ fontWeight: "500" }}>
+                          Explore Case Studies
+                        </Typography>
+                      </Button>
+                    </Link>
                   </Box>
                 </Box>
               </Box>

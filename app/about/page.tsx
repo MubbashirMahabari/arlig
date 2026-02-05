@@ -10,9 +10,9 @@ import Defines from "./components/Defines";
 import Promise from "./components/Promise";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Arlig Technologies | Salesforce Consulting Experts",
   description:
-    "Learn about Arlig's story, belief, and vision. We are dedicated to delivering excellence and innovation in everything we do.",
+    "Trusted Salesforce Partners. We combine deep technical expertise with industry strategy to deliver lasting business value.",
 };
 
 export default function About() {

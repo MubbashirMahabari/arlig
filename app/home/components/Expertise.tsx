@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
-import icon_1 from "../../../public/assets/expertise/social-network.png";
-import icon_2 from "../../../public/assets/expertise/implementation.png";
-import icon_3 from "../../../public/assets/expertise/collaborate.png";
-import icon_4 from "../../../public/assets/expertise/staff-management.png";
+import icon_1 from "../../../public/assets/icons/icon_1.png";
+import icon_2 from "../../../public/assets/icons/icon_2.png";
+import icon_3 from "../../../public/assets/icons/icon_3.png";
+import icon_4 from "../../../public/assets/icons/icon_4.png";
 
 // feature data
 const feature_data1 = [
@@ -83,15 +83,15 @@ const Expertise = () => {
                   sx={{
                     gap: 2,
                     p: 3,
-                    border: "1px solid #e5e7eb",
-                    borderRadius: "12px",
-                    backgroundColor: "#fff",
+                    // border: "1px solid #e5e7eb",
+                    borderRadius: "20px",
+                    backgroundColor: "#3BAFDA0A",
                     height: "100%",
                     transition: "all 0.3s ease",
-                    cursor: "pointer",
                     "&:hover": {
                       transform: "scale(1.05)",
                       boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+                      backgroundColor: "#fff",
                     },
                   }}
                 >
@@ -129,15 +129,15 @@ const Expertise = () => {
                     sx={{
                       gap: 2,
                       p: 3,
-                      border: "1px solid #e5e7eb",
-                      borderRadius: "12px",
-                      backgroundColor: "#fff",
+                      // border: "1px solid #e5e7eb",
+                      borderRadius: "20px",
+                      backgroundColor: "#3BAFDA0A",
                       height: "100%",
                       transition: "all 0.3s ease",
-                      cursor: "pointer",
                       "&:hover": {
                         transform: "scale(1.05)",
                         boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+                        backgroundColor: "#fff",
                       },
                     }}
                   >
