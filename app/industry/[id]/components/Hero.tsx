@@ -1,9 +1,11 @@
+'use client';
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import { it } from "node:test";
 import Link from "next/link";
 import industryDetailImage from "../../../../public/assets/services/service_hero.jpg";
+import { useStrategyModal } from "../../../context/StrategyModalContext";
 type Industry = {
   img: string;
   title: string;
@@ -15,6 +17,7 @@ type HeroProps = {
 };
 
 export default function Hero({ industry }: HeroProps) {
+  const { openModal } = useStrategyModal();
   return (
     <Box sx={{ backgroundColor: "#3BAFDA0A", padding: "40px 0" }}>
       <Container maxWidth="xl">
@@ -57,7 +60,7 @@ export default function Hero({ industry }: HeroProps) {
                 {/* Buttons */}
                 <Box
                   sx={{
-                    backgroundColor: "#0B1F33",
+                    backgroundColor: "#003366",
                     padding: "5px",
                     borderRadius: "50px",
                     marginTop: "15px",
@@ -72,23 +75,22 @@ export default function Hero({ industry }: HeroProps) {
                     },
                   }}
                 >
-                  <Link href='/contact' style={{ textDecoration: "none" }}>
-                    <Button
-                      sx={{
-                        textTransform: "none",
-                        color: "white",
-                        textAlign: "center",
-                        width: "100%",
-                        alignContent: "center",
-                      }}
-                    >
-                      <Link href="#" style={{ textDecoration: "none" }}>
-                        <Typography sx={{ fontWeight: "400", color: "#fff" }}>
-                          Talk to an Expert
-                        </Typography>
-                      </Link>
-                    </Button>
-                  </Link>
+
+                  <Button
+                    onClick={openModal}
+                    sx={{
+                      textTransform: "none",
+                      color: "white",
+                      textAlign: "center",
+                      width: "100%",
+                      alignContent: "center",
+                    }}
+                  >
+                    <Typography sx={{ fontWeight: "400", color: "#fff" }}>
+                      Talk to an Expert
+                    </Typography>
+                  </Button>
+
                 </Box>
               </Box>
             </Grid>

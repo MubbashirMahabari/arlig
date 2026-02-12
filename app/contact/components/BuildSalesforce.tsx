@@ -1,8 +1,11 @@
+'use client';
 import React from "react";
 import Image from "next/image";
 import { Box, Container, Typography, Grid, Button, Link } from "@mui/material";
 import connectBg from "../../../public/assets/connect_bg.png";
+import { useStrategyModal } from "../../context/StrategyModalContext";
 export default function BuildSalesforce() {
+  const { openModal } = useStrategyModal();
   return (
     <Box
       sx={{
@@ -84,21 +87,24 @@ export default function BuildSalesforce() {
                 },
               }}
             >
-              <Button
-                sx={{
-                  textTransform: "none",
-                  color: "#003366",
-                  textAlign: "center",
-                  width: "100%",
-                  alignContent: "center",
-                }}
-              >
-                <Link href="/contact" sx={{ textDecoration: "none" }}>
+              <Link href="#contact-form">
+                <Button
+
+                  sx={{
+                    textTransform: "none",
+                    color: "#003366",
+                    textAlign: "center",
+                    width: "100%",
+                    alignContent: "center",
+                  }}
+                >
+
                   <Typography sx={{ fontWeight: "600" }}>
                     Schedule Consultation
                   </Typography>
-                </Link>
-              </Button>
+
+                </Button>
+              </Link>
             </Box>
 
             <Box
@@ -118,7 +124,7 @@ export default function BuildSalesforce() {
                 },
               }}
             >
-              <Button
+              <Link href='/services' style={{ textDecoration: "none" }}><Button
                 sx={{
                   textTransform: "none",
                   color: "#fff",
@@ -127,12 +133,11 @@ export default function BuildSalesforce() {
                   alignContent: "center",
                 }}
               >
-                <Link href="/services" sx={{ textDecoration: "none" }}>
-                  <Typography sx={{ fontWeight: "400", color: "#fff" }}>
-                    View Services
-                  </Typography>
-                </Link>
-              </Button>
+                <Typography sx={{ fontWeight: "400", color: "#fff" }}>
+                  View Services
+                </Typography>
+
+              </Button></Link>
             </Box>
           </Box>
         </Box>

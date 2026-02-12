@@ -14,9 +14,11 @@ import blogData from "../../../data/blogData";
 
 export default function Exprience() {
   const [value, setValue] = React.useState("1");
+  const [visibleCount, setVisibleCount] = useState(3);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
+    setVisibleCount(3);
   };
 
   const filteredData =
@@ -26,6 +28,7 @@ export default function Exprience() {
 
   return (
     <Box
+      id="experience"
       sx={{
         backgroundColor: "#3BAFDA0A",
         padding: "40px 0",
@@ -102,13 +105,13 @@ export default function Exprience() {
           </TabContext>
         </Box>
 
-        <Box sx={{ marginTop: "30px" }}>
+        <Box>
           <Grid
             container
             spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
-            {filteredData.map((item) => (
+            {filteredData.slice(0, visibleCount).map((item) => (
               <Grid key={item.id} size={{ xs: 12, sm: 4, md: 4 }}>
                 <Link
                   href={`/blog/${item.id}`}
@@ -116,9 +119,10 @@ export default function Exprience() {
                 >
                   <Box
                     sx={{
-                      gap: 4,
+                      marginTop: "60px",
+                      gap: 6,
                       borderRadius: "12px",
-                      height: "100%",
+                      height: { xs: "100%", sm: "100%", md: "460px" },
                       transition: "all 0.3s ease",
                       cursor: "pointer",
                       "&:hover": {
@@ -147,10 +151,15 @@ export default function Exprience() {
                       <Typography
                         sx={{
                           marginTop: "20px",
-                          lineHeight: "30px",
+                          lineHeight: "32px",
                           fontWeight: 500,
                           color: "#2E2E2E",
                           fontSize: "24px",
+
+                          display: "-webkit-box",
+                          WebkitLineClamp: 3,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
                         }}
                       >
                         {item.title}
@@ -172,43 +181,48 @@ export default function Exprience() {
             ))}
           </Grid>
         </Box>
-        <Box
-          sx={{ marginTop: "30px", display: "flex", justifyContent: "center" }}
-        >
+        {visibleCount < filteredData.length && (
           <Box
             sx={{
-              backgroundColor: "white",
-              marginTop: "20px",
-              padding: "5px 20px",
-              borderRadius: "50px",
-              border: "#1F4ED8 2px solid",
-              textAlign: "center",
-              alignContent: "center",
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-              "&:hover": {
-                transform: "scale(1.05)",
-                boxShadow: "0 10px 30px rgba(31, 78, 216, 0.2)",
-              },
+              marginTop: "60px",
+              display: "flex",
+              justifyContent: "center",
             }}
           >
-            <Button
+            <Box
+              onClick={() => setVisibleCount((prev) => prev + 3)}
               sx={{
-                textTransform: "none",
-                color: "#fff",
+                backgroundColor: "white",
+                marginTop: "20px",
+                padding: "5px 20px",
+                borderRadius: "50px",
+                border: "#1F4ED8 2px solid",
                 textAlign: "center",
-                width: "100%",
                 alignContent: "center",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  boxShadow: "0 10px 30px rgba(31, 78, 216, 0.2)",
+                },
               }}
             >
-              <Link href="/blog" style={{ textDecoration: "none" }}>
+              <Button
+                sx={{
+                  textTransform: "none",
+                  color: "#fff",
+                  textAlign: "center",
+                  width: "100%",
+                  alignContent: "center",
+                }}
+              >
                 <Typography sx={{ fontWeight: "600", color: "#003366" }}>
                   More Resources
                 </Typography>
-              </Link>
-            </Button>
+              </Button>
+            </Box>
           </Box>
-        </Box>
+        )}
       </Container>
     </Box>
   );

@@ -1,14 +1,16 @@
+'use client';
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import heroImage from "../../../public/assets/about/about_hero_image.jpg";
 import Link from "next/link";
-
+import { useStrategyModal } from "../../context/StrategyModalContext";
 export default function Hero() {
+  const { openModal } = useStrategyModal();
   return (
     <Box
       className="hero-section"
-      sx={{ backgroundColor: "#3BAFDA0A", padding: "40px 0" }}
+      sx={{ backgroundColor: "#3BAFDA0A", padding: { xs: "40px 0px", md: "40px 20px" } }}
     >
       <Container maxWidth="xl">
         <Box sx={{ height: "50%" }}>
@@ -17,7 +19,7 @@ export default function Hero() {
             spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
-            <Grid size={{ xs: 12, sm: 4, md: 7 }}>
+            <Grid size={{ xs: 12, sm: 4, md: 6 }}>
               <Box>
                 {/* large text */}
                 <Box>
@@ -30,14 +32,19 @@ export default function Hero() {
                       color: "#2E2E2E",
                     }}
                   >
-                    The People Behind
+                    The <Box component="span" sx={{
+                      fontSize: { xs: "40px", md: "65px" },
+                      fontWeight: 700,
+                      lineHeight: 1.1,
+                      color: "#1F4ED8",
+                    }}>People Behind</Box>
                   </Typography>
                   <Typography
                     sx={{
                       fontSize: { xs: "40px", md: "65px" },
                       fontWeight: 700,
                       lineHeight: 1.1,
-                      color: "#1F4ED8",
+                      color: "#2E2E2E",
                     }}
                   >
                     Arlig Technologies
@@ -67,29 +74,28 @@ export default function Hero() {
                       borderRadius: "50px",
                       backgroundColor: "#003366",
                       textAlign: "center",
-
                       padding: "10px 18px",
                     }}
                   >
-                    <Link href="/contact" style={{ textDecoration: "none" }}>
-                      <Button
-                        // onClick={}
-                        sx={{
-                          p: 0,
-                          color: "white",
-                          textTransform: "none",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Let's collaborate
-                      </Button>
-                    </Link>
+
+                    <Button
+                      onClick={openModal}
+                      sx={{
+                        p: 0,
+                        color: "white",
+                        textTransform: "none",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Let's collaborate
+                    </Button>
+
                   </Box>
                 </Box>
               </Box>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 4, md: 5 }}>
+            <Grid size={{ xs: 12, sm: 4, md: 6 }}>
               <Box sx={{ width: "100%", height: "90%" }}>
                 <Image
                   src={heroImage}

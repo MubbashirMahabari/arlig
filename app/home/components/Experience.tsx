@@ -102,11 +102,11 @@ export default function Experience() {
                       },
                     }}
                   >
-                    <Box sx={{ mb: 2, borderRadius: "12px" }}>
+                    <Box sx={{ mb: 2, borderRadius: "12px", height:"240px" }}>
                       <Image
                         src={item.img}
                         alt={String(item.title)}
-                        style={{ borderRadius: "12px" }}
+                        style={{ borderRadius: "12px", height:"100%" }}
                       />
                     </Box>
 

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -10,13 +10,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "../../../public/assets/arlig_logo.jpg";
+import logo from "../../../public/assets/logo_arlig.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { navLinks } from "../navLinks";
 import { usePathname } from "next/navigation";
+import { useStrategyModal } from "../../../app/context/StrategyModalContext";
 
 function Navbar() {
+  const { openModal } = useStrategyModal();
+
   const pathname = usePathname();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null,
@@ -41,7 +44,6 @@ function Navbar() {
   const handleResourcesClose = () => {
     setAnchorElResources(null);
   };
-
   return (
     <AppBar
       position="static"
@@ -177,6 +179,10 @@ function Navbar() {
                           pathname === "/blog" || pathname === "/industry"
                             ? "#003366 3px solid"
                             : "none",
+                        "&:hover": {
+                          backgroundColor: "transparent",
+                          color: "#003366",
+                        },
                       }}
                     >
                       {page.label}
@@ -188,26 +194,58 @@ function Navbar() {
                       onClose={handleResourcesClose}
                       MenuListProps={{
                         onMouseLeave: handleResourcesClose,
+                        sx: { py: 1 },
                       }}
                       anchorOrigin={{
                         vertical: "bottom",
-                        horizontal: "center",
+                        horizontal: "left",
                       }}
                       transformOrigin={{
                         vertical: "top",
-                        horizontal: "center",
+                        horizontal: "left",
+                      }}
+                      PaperProps={{
+                        elevation: 4,
+                        sx: {
+                          mt: 1.5,
+                          overflow: "visible",
+                          borderRadius: "12px",
+                          border: "1px solid #eaeaea",
+                          boxShadow:
+                            "0px 10px 40px -10px rgba(0,0,0,0.08)",
+                        },
                       }}
                     >
-                      {page.children.map((child) => (
-                        <MenuItem
-                          key={child.label}
-                          component={Link}
-                          href={child.href}
-                          onClick={handleResourcesClose}
-                        >
-                          {child.label}
-                        </MenuItem>
-                      ))}
+                      {page.children.map((child) => {
+                        const isActive = pathname === child.href;
+                        return (
+                          <MenuItem
+                            key={child.label}
+                            component={Link}
+                            href={child.href}
+                            onClick={handleResourcesClose}
+                            sx={{
+                              minWidth: "200px",
+                              px: 3,
+                              py: 1.5,
+                              color: isActive ? "#003366" : "#4a4a4a",
+                              fontWeight: isActive ? 600 : 500,
+                              backgroundColor: isActive
+                                ? "#f0f7ff"
+                                : "transparent",
+                              fontSize: "15px",
+                              transition: "all 0.2s ease",
+                              "&:hover": {
+                                backgroundColor: "#f5f9ff",
+                                color: "#003366",
+                                pl: 3.5, // Subtle shift effect
+                              },
+                            }}
+                          >
+                            {child.label}
+                          </MenuItem>
+                        );
+                      })}
                     </Menu>
                   </Box>
                 );
@@ -247,18 +285,19 @@ function Navbar() {
               padding: "10px 18px",
             }}
           >
-            <Link href="/contact" style={{ textDecoration: "none" }}>
-              <Button
-                sx={{
-                  p: 0,
-                  color: "white",
-                  textTransform: "none",
-                  fontWeight: "500",
-                }}
-              >
-                Let's collaborate
-              </Button>
-            </Link>
+
+            <Button
+              onClick={openModal}
+              sx={{
+                p: 0,
+                color: "white",
+                textTransform: "none",
+                fontWeight: "500",
+              }}
+            >
+              Let's collaborate
+            </Button>
+
           </Box>
         </Toolbar>
       </Container>

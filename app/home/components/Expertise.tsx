@@ -3,8 +3,10 @@ import React from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
 import icon_1 from "../../../public/assets/icons/icon_1.png";
 import icon_2 from "../../../public/assets/icons/icon_2.png";
-import icon_3 from "../../../public/assets/icons/icon_3.png";
+import icon_3 from "../../../public/assets/icons/Integration.png";
 import icon_4 from "../../../public/assets/icons/icon_4.png";
+import icon_5 from "../../../public/assets/icons/icon_5.png";
+import icon_6 from "../../../public/assets/icons/Industry Solution.png";
 
 // feature data
 const feature_data1 = [
@@ -22,7 +24,7 @@ const feature_data1 = [
   },
   {
     id: 3,
-    img: icon_2,
+    img: icon_3,
     title: "Integration",
     desc: "Connect Salesforce with Finance, HR, Payroll, and third-party apps.",
   },
@@ -30,19 +32,19 @@ const feature_data1 = [
 const feature_data2 = [
   {
     id: 1,
-    img: icon_3,
+    img: icon_4,
     title: "Managed Services",
     desc: "Continuous support and optimization.",
   },
   {
     id: 2,
-    img: icon_4,
+    img: icon_5,
     title: "HRMS on Salesforce",
     desc: "Payroll & employee lifecycle simplified on one platform.",
   },
   {
     id: 3,
-    img: icon_4,
+    img: icon_6,
     title: "Industry Solutions",
     desc: "Built for Heavy Equipment Rentals, Real Estate, and Media.",
   },
@@ -83,7 +85,6 @@ const Expertise = () => {
                   sx={{
                     gap: 2,
                     p: 3,
-                    // border: "1px solid #e5e7eb",
                     borderRadius: "20px",
                     backgroundColor: "#3BAFDA0A",
                     height: "100%",
@@ -129,7 +130,6 @@ const Expertise = () => {
                     sx={{
                       gap: 2,
                       p: 3,
-                      // border: "1px solid #e5e7eb",
                       borderRadius: "20px",
                       backgroundColor: "#3BAFDA0A",
                       height: "100%",

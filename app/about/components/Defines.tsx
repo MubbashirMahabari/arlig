@@ -5,6 +5,8 @@ import icon_1 from "../../../public/assets/icons/icon_1.png";
 import icon_2 from "../../../public/assets/icons/icon_2.png";
 import icon_3 from "../../../public/assets/icons/icon_3.png";
 import icon_4 from "../../../public/assets/icons/icon_4.png";
+import icon_5 from "../../../public/assets/icons/Empathy Icon.png";
+import icon_6 from "../../../public/assets/icons/Integration.png";
 
 export default function Defines() {
   const defines_data1 = [
@@ -22,7 +24,7 @@ export default function Defines() {
     },
     {
       id: 3,
-      img: icon_2,
+      img: icon_5,
       title: "Empathy",
       desc: "We listen deeply and build for real impact.",
     },
@@ -36,19 +38,19 @@ export default function Defines() {
     },
     {
       id: 2,
-      img: icon_4,
+      img: icon_6,
       title: "Customer Success",
       desc: "Your outcomes define ours.",
     },
   ];
   return (
-    <Box sx={{ backgroundColor: "#FFFFFF", padding: "40px 0" }}>
+    <Box sx={{ backgroundColor: "#3BAFDA0A", padding: "40px 0" }}>
       <Container maxWidth="xl">
         <Box
           sx={{
             textAlign: "center",
             padding: "10px 15px",
-            backgroundColor: "#E0E0E0",
+            backgroundColor: "#fff",
             borderRadius: "30px",
             border: "#E8E8E8 solid 1px",
             display: "inline-block",
@@ -75,14 +77,15 @@ export default function Defines() {
                     gap: 2,
                     p: 3,
                     border: "1px solid #e5e7eb",
-                    borderRadius: "12px",
-                    backgroundColor: "#fff",
+                    borderRadius: "20px",
+                    backgroundColor: "#3BAFDA0A",
                     height: "100%",
                     transition: "all 0.3s ease",
                     cursor: "pointer",
                     "&:hover": {
                       transform: "scale(1.05)",
                       boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+                      backgroundColor: "#fff",
                     },
                   }}
                 >
@@ -121,14 +124,15 @@ export default function Defines() {
                       gap: 2,
                       p: 3,
                       border: "1px solid #e5e7eb",
-                      borderRadius: "12px",
-                      backgroundColor: "#fff",
+                      borderRadius: "20px",
+                      backgroundColor: "#3BAFDA0A",
                       height: "100%",
                       transition: "all 0.3s ease",
                       cursor: "pointer",
                       "&:hover": {
                         transform: "scale(1.05)",
                         boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+                        backgroundColor: "#fff",
                       },
                     }}
                   >

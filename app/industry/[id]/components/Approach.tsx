@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import icon_1 from "../../../../public/assets/icons/like-shapes.png";
-import icon_2 from "../../../../public/assets/icons/like-shapes.png";
-import icon_3 from "../../../../public/assets/icons/like-shapes.png";
+import icon_2 from "../../../../public/assets/icons/magic-star.png";
+import icon_3 from "../../../../public/assets/icons/microscope.png";
 
 export default function Approach() {
   const approach_data = [

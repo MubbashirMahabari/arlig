@@ -7,7 +7,7 @@ import EastIcon from "@mui/icons-material/East";
 
 export default function IndustryItems() {
   return (
-    <Box sx={{ backgroundColor: "#3BAFDA0A", paddingBottom: "40px" }}>
+    <Box id='industry-items' sx={{ backgroundColor: "#3BAFDA0A", paddingBottom: "40px" }}>
       <Container maxWidth="xl">
         <Box sx={{ paddingTop: "20px" }}>
           <Typography
@@ -98,7 +98,7 @@ export default function IndustryItems() {
                           <Typography
                             sx={{ marginRight: "10px", fontWeight: "500" }}
                           >
-                            View Case Study
+                            View Solution
                           </Typography>
                           <Box>
                             <EastIcon sx={{ color: "#1F4ED8" }} />

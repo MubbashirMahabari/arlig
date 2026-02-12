@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,8 +14,9 @@ import innovationImage from "../../../public/assets/services/innovation.jpg";
 import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
 import RadioIcon from "@mui/icons-material/Radio";
 import LoopIcon from "@mui/icons-material/Loop";
-
+import { useStrategyModal } from "../../context/StrategyModalContext";
 export default function Innovation() {
+  const { openModal } = useStrategyModal();
   return (
     <Box sx={{ padding: "40px 0" }}>
       <Container maxWidth="xl">
@@ -111,10 +113,10 @@ export default function Innovation() {
               >
                 <Box
                   sx={{
-                    backgroundColor: "#0B1F33",
+                    backgroundColor: "#003366",
                     padding: "2px",
                     borderRadius: "50px",
-                    border: "#0B1F33 3px solid",
+                    border: "#003366 3px solid",
                     marginRight: { xs: "0px", md: "15px" },
                     marginBottom: { xs: "15px", md: "0px" },
                     textAlign: "center",
@@ -128,19 +130,20 @@ export default function Innovation() {
                     },
                   }}
                 >
-                  <Link href='/contact' style={{ textDecoration: 'none' }}>
-                    <Button
-                      sx={{
-                        textTransform: "none",
-                        color: "white",
-                        textAlign: "center",
-                        width: "100%",
-                        alignContent: "center",
-                      }}
-                    >
-                      <Typography>Talk to a Salesforce Expert</Typography>
-                    </Button>
-                  </Link>
+
+                  <Button
+                    onClick={openModal}
+                    sx={{
+                      textTransform: "none",
+                      color: "white",
+                      textAlign: "center",
+                      width: "100%",
+                      alignContent: "center",
+                    }}
+                  >
+                    <Typography>Talk to a Salesforce Expert</Typography>
+                  </Button>
+
                 </Box>
 
                 <Box
@@ -161,19 +164,19 @@ export default function Innovation() {
                   }}
                 >
                   <Link href='/blog' style={{ textDecoration: 'none' }} >
-                  <Button
-                    sx={{
-                      textTransform: "none",
-                      color: "#1F4ED8",
-                      textAlign: "center",
-                      width: "100%",
-                      alignContent: "center",
-                    }}
-                  >
-                    <Typography sx={{ fontWeight: "500" }}>
-                      Explore Case Studies
-                    </Typography>
-                  </Button>
+                    <Button
+                      sx={{
+                        textTransform: "none",
+                        color: "#1F4ED8",
+                        textAlign: "center",
+                        width: "100%",
+                        alignContent: "center",
+                      }}
+                    >
+                      <Typography sx={{ fontWeight: "500" }}>
+                        Explore Case Studies
+                      </Typography>
+                    </Button>
                   </Link>
                 </Box>
               </Box>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <Box sx={{ backgroundColor: "#3BAFDA0A", padding: "40px 0" }}>
+    <Box sx={{ backgroundColor: "#3BAFDA0A", padding: { xs: "40px 0px", md: "40px 20px" } }}>
       <Container maxWidth="xl">
         <Box>
           <Typography
@@ -57,7 +57,7 @@ export default function Hero() {
         </Box>
         <Box
           sx={{
-            backgroundColor: "#0B1F33",
+            backgroundColor: "#003366",
             padding: "5px",
             borderRadius: "50px",
             marginTop: "15px",
@@ -81,7 +81,7 @@ export default function Hero() {
               alignContent: "center",
             }}
           >
-            <Link href="/" style={{ textDecoration: "none" }}>
+            <Link href="#experience" style={{ textDecoration: "none" }}>
               <Typography sx={{ fontWeight: "400", color: "#fff" }}>
                 Explore Resources
               </Typography>

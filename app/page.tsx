@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import Home from "./home/page";
 import { Metadata } from "next";
 

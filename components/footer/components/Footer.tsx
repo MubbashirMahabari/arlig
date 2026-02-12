@@ -1,8 +1,12 @@
+'use client';
 import React from "react";
 import Image from "next/image";
 import { Box, Container, Typography, Grid, Button, Link } from "@mui/material";
 import logo from "../../../public/assets/arlig_footer_logo.png";
+import { useStrategyModal } from "../../../app/context/StrategyModalContext";
 export default function Footer() {
+   const { openModal } = useStrategyModal();
+
   return (
     <Box
       sx={{
@@ -59,6 +63,7 @@ export default function Footer() {
           }}
         >
           <Button
+          onClick={openModal}
             sx={{
               textTransform: "none",
               color: "#fff",
@@ -67,11 +72,11 @@ export default function Footer() {
               alignContent: "center",
             }}
           >
-            <Link href="/contact" style={{ textDecoration: "none" }}>
-              <Typography sx={{ fontWeight: "600", color: "#003366" }}>
-                Let's Talk
-              </Typography>
-            </Link>
+
+            <Typography sx={{ fontWeight: "600", color: "#003366" }}>
+              Let's Talk
+            </Typography>
+
           </Button>
         </Box>
       </Box>

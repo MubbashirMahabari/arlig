@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import {
   Box,
@@ -14,7 +13,7 @@ import contactImage from "../../../public/assets/contact/contact_image.jpg";
 
 export default function ConversationForm() {
   return (
-    <Box sx={{ padding: "40px 0" }}>
+    <Box id='contact-form'sx={{ padding: "40px 0" }}>
       <Container maxWidth="xl">
         <Box>
           <Box>
@@ -62,12 +61,13 @@ export default function ConversationForm() {
                   >
                     <Box sx={{ flex: 1 }}>
                       <Typography sx={{ fontSize: "14px", mb: 0.5 }}>
-                        First Name <span style={{ color: "red" }}>*</span>
+                        Full Name <span style={{ color: "red" }}>*</span>
                       </Typography>
                       <TextField
+                        id="fullName"
                         fullWidth
                         size="small"
-                        placeholder="First Name"
+                        placeholder="Full Name"
                         sx={{
                           "& .MuiOutlinedInput-root": {
                             backgroundColor: "#fff",
@@ -79,32 +79,15 @@ export default function ConversationForm() {
                       />
                     </Box>
 
-                    <Box sx={{ flex: 1 }}>
-                      <Typography sx={{ fontSize: "14px", mb: 0.5 }}>
-                        Last Name <span style={{ color: "red" }}>*</span>
-                      </Typography>
-                      <TextField
-                        fullWidth
-                        size="small"
-                        placeholder="Last Name"
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            backgroundColor: "#fff",
-                            borderRadius: "6px",
-                            fontSize: "14px",
-                            padding: "2px",
-                          },
-                        }}
-                      />
-                    </Box>
                   </Box>
 
                   {/* Company */}
                   <Box sx={{ mt: 2 }}>
                     <Typography sx={{ fontSize: "14px", mb: 0.5 }}>
-                      Company <span style={{ color: "red" }}>*</span>
+                      Company
                     </Typography>
                     <TextField
+                      id="company"
                       fullWidth
                       size="small"
                       placeholder="Company Name"
@@ -125,6 +108,7 @@ export default function ConversationForm() {
                       Work Email Address <span style={{ color: "red" }}>*</span>
                     </Typography>
                     <TextField
+                      id="email"
                       fullWidth
                       size="small"
                       type="email"
@@ -143,9 +127,10 @@ export default function ConversationForm() {
                   {/* Mobile */}
                   <Box sx={{ mt: 2 }}>
                     <Typography sx={{ fontSize: "14px", mb: 0.5 }}>
-                      Mobile <span style={{ color: "red" }}>*</span>
+                      Mobile
                     </Typography>
                     <TextField
+                      id="mobile"
                       fullWidth
                       size="small"
                       placeholder="Mobile Number"
@@ -166,6 +151,7 @@ export default function ConversationForm() {
                       Message
                     </Typography>
                     <TextField
+                      id="message"
                       fullWidth
                       multiline
                       rows={4}

@@ -1,8 +1,11 @@
+'use client';
 import React from "react";
 import Image from "next/image";
 import { Box, Container, Typography, Grid, Button, Link } from "@mui/material";
 import connectBg from "../../../public/assets/connect_bg.png";
+import { useStrategyModal } from "../../context/StrategyModalContext";
 export default function Connect() {
+   const { openModal } = useStrategyModal();
   return (
     <Box
       sx={{
@@ -63,7 +66,7 @@ export default function Connect() {
           <Box
             sx={{
               backgroundColor: "white",
-              marginTop:"20px",
+              marginTop: "20px",
               padding: "5px 20px",
               borderRadius: "50px",
               border: "#1F4ED8 2px solid",
@@ -78,6 +81,7 @@ export default function Connect() {
             }}
           >
             <Button
+              onClick={openModal}
               sx={{
                 textTransform: "none",
                 color: "#fff",
@@ -86,11 +90,11 @@ export default function Connect() {
                 alignContent: "center",
               }}
             >
-              <Link href="/contact" style={{ textDecoration: "none" }}>
-                <Typography sx={{ fontWeight: "600", color: "#003366" }}>
-                  Let's Talk
-                </Typography>
-              </Link>
+
+              <Typography sx={{ fontWeight: "600", color: "#003366" }}>
+                Let's Talk
+              </Typography>
+
             </Button>
           </Box>
         </Box>

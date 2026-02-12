@@ -8,34 +8,32 @@ import type { SwiperOptions } from "swiper/types";
 import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import Image from "next/image";
-import brand_img_1 from "../../../public/assets/client/Company logo-1.png";
-import brand_img_3 from "../../../public/assets/client/Company logo-2.png";
-import brand_img_4 from "../../../public/assets/client/Company logo-3.png";
-import brand_img_5 from "../../../public/assets/client/Company logo-4.png";
-import brand_img_6 from "../../../public/assets/client/Company logo-5.png";
-import brand_img_7 from "../../../public/assets/client/Company logo-6.png";
-import brand_img_8 from "../../../public/assets/client/Company logo-7.png";
-import brand_img_9 from "../../../public/assets/client/Company logo-8.png";
-import brand_img_10 from "../../../public/assets/client/Company logo-9.png";
-import brand_img_2 from "../../../public/assets/client/Company logo-10.png";
+import brand_img_1 from "../../../public/assets/client/new client/Juincubator.png";
+import brand_img_3 from "../../../public/assets/client/new client/Berrypay.png";
+import brand_img_4 from "../../../public/assets/client/new client/5p.png";
+import brand_img_5 from "../../../public/assets/client/new client/Gaboo.png";
+import brand_img_6 from "../../../public/assets/client/new client/HSBE.png";
+// import brand_img_7 from "../../../public/assets/client/new client/Juincubator.png";
+// import brand_img_8 from "../../../public/assets/client/Company logo-7.png";
+// import brand_img_9 from "../../../public/assets/client/Company logo-8.png";
+// import brand_img_10 from "../../../public/assets/client/Company logo-9.png";
+// import brand_img_2 from "../../../public/assets/client/Company logo-10.png";
 
 export default function ClientCarousel() {
   const brand_content = {
     brand_img_next: [
-      { img: brand_img_6 },
-      { img: brand_img_2 },
-
-      { img: brand_img_7 },
-      { img: brand_img_5 },
-
-      { img: brand_img_8 },
+      { img: brand_img_1 },
       { img: brand_img_4 },
 
-      { img: brand_img_9 },
       { img: brand_img_3 },
+      { img: brand_img_6 },
 
-      { img: brand_img_10 },
+      { img: brand_img_5 },
       { img: brand_img_1 },
+
+
+      { img: brand_img_4 },
+      { img: brand_img_5 },
     ],
   };
   const { brand_img_next } = brand_content;
@@ -81,7 +79,7 @@ export default function ClientCarousel() {
             Join our growing list of Happy Clients
           </Typography>
         </Box>
-        <Box className="">
+        <Box sx={{ borderTop: "1px solid #e0e0e0", borderBottom: "1px solid #e0e0e0", borderLeft: "1px solid #e0e0e0" }}>
           <Box>
             <Swiper
               {...settings}
@@ -97,14 +95,15 @@ export default function ClientCarousel() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      borderRight: "1px solid #e0e0e0",
+                      padding: "20px",
                     }}
                   >
                     <Image
                       src={item.img}
                       alt="client-logo"
                       style={{
-                        maxHeight: "80px",
-                        width: "auto",
+                        width: "100%",
                         height: "100%",
                         objectFit: "contain",
                       }}

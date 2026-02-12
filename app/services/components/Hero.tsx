@@ -1,12 +1,14 @@
+'use client';
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import heroImage from "../../../public/assets/services/service_hero.jpg";
 import Link from "next/link";
-
+import { useStrategyModal } from "../../context/StrategyModalContext";
 export default function Hero() {
+  const { openModal } = useStrategyModal();
   return (
-    <Box sx={{ backgroundColor: "#3BAFDA0A", padding: "40px 0" }}>
+    <Box sx={{ backgroundColor: "#3BAFDA0A", padding: { xs: "40px 0px", md: "40px 20px" } }}>
       <Container maxWidth="xl">
         <Box sx={{ height: "50%" }}>
           <Grid
@@ -21,25 +23,27 @@ export default function Hero() {
                   <Typography
                     component="h1"
                     sx={{
-                      fontSize: { xs: "40px", md: "65px" },
+                      fontSize: { xs: "40px", md: "62px" },
                       fontWeight: 700,
                       lineHeight: 1.1,
                       color: "#2E2E2E",
                       marginBottom: "10px",
                     }}
                   >
-                    Salesforce Consulting{" "}
-                    <Box component="span" sx={{ color: "#1F4ED8", display: "block" }}>
-                      Services
-                    </Box>
+                    Transform Your Business
+                    <span style={{ color: "#1F4ED8", display: "block" }}>
+                      with Salesforce
+                    </span>
+
                   </Typography>
                   <Typography
                     component="p"
                     sx={{
-                      fontSize: { xs: "30px", md: "50px" },
+                      fontSize: { xs: "40px", md: "65px" },
                       fontWeight: 700,
                       lineHeight: 1.1,
                       color: "#2E2E2E",
+                      marginBottom: "10px",
                     }}
                   >
                     From Strategy to Success
@@ -67,10 +71,10 @@ export default function Hero() {
                 >
                   <Box
                     sx={{
-                      backgroundColor: "#0B1F33",
+                      backgroundColor: "#003366",
                       padding: "2px",
                       borderRadius: "50px",
-                      border: "#0B1F33 3px solid",
+                      border: "#003366 3px solid",
                       marginRight: { xs: "0px", md: "15px" },
                       marginBottom: { xs: "15px", md: "0px" },
                       textAlign: "center",
@@ -84,8 +88,9 @@ export default function Hero() {
                       },
                     }}
                   >
-                    <Link href="/contact" style={{ textDecoration: "none" }}>
+                    
                       <Button
+                       onClick={openModal}
                         sx={{
                           textTransform: "none",
                           color: "white",
@@ -96,7 +101,7 @@ export default function Hero() {
                       >
                         <Typography>Talk to a Salesforce Expert</Typography>
                       </Button>
-                    </Link>
+                   
                   </Box>
 
                   <Box

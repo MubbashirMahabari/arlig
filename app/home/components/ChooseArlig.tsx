@@ -18,7 +18,7 @@ export default function ChooseArlig() {
     {
       id: 2,
       count: "10+",
-      title: "Years of Salesforce Expertise",
+      title: "Salesforce Expertise",
       desc: "10+ Countries",
     },
     {
@@ -34,13 +34,18 @@ export default function ChooseArlig() {
       desc: "Certification across Salesforce Products",
     },
   ];
-  const feature_data2 = [
-    
-  ];
+
   return (
     <Box sx={{ backgroundColor: "#3BAFDA0A", padding: "40px 0" }}>
       <Container maxWidth="xl">
-        <Box>
+        <Box sx={{ paddingTop: "20px" }}>
+          <Typography
+            sx={{ fontSize: "40px", fontWeight: "700", color: "#2E2E2E" }}
+          >
+            Why Choose Arlig Technologies?
+          </Typography>
+        </Box>
+        <Box sx={{ marginTop: "20px" }}>
           <Grid
             container
             spacing={{ xs: 2, md: 3 }}
@@ -68,8 +73,8 @@ export default function ChooseArlig() {
                         sx={{
                           display: "flex",
                           flexDirection: "column",
-                          alignItems: { xs: "center", md: "flex-start" },
-                          textAlign: { xs: "center", md: "left" },
+                          alignItems: "center",
+                          textAlign: "center",
                         }}
                       >
                         <Box>
@@ -84,18 +89,22 @@ export default function ChooseArlig() {
                           </Typography>
                         </Box>
 
-                        <Box>
+                        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                           <Box
                             sx={{
                               textAlign: "center",
-                              padding: "5px",
+                              padding: "5px 20px",
                               border: "#1F4ED8 1px solid",
                               borderRadius: "30px",
                               marginBottom: "20px",
+                              width: "220px",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
                             }}
                           >
                             <Typography
-                              sx={{ fontWeight: 500, color: "#1F4ED8" }}
+                              sx={{ fontWeight: 500, color: "#1F4ED8", fontSize: "14px" }}
                             >
                               {item.title}
                             </Typography>
@@ -103,7 +112,7 @@ export default function ChooseArlig() {
 
                           <Typography
                             sx={{
-                              fontSize: "18px",
+                              fontSize: "16px",
                               color: "#6B7280",
                               mt: "10px",
                               fontWeight: "400",

@@ -33,7 +33,7 @@ export default function Hero() {
 
         <Box
           sx={{
-            backgroundColor: "#0B1F33",
+            backgroundColor: "#003366",
             padding: "5px",
             borderRadius: "50px",
             marginTop: "15px",
@@ -57,7 +57,7 @@ export default function Hero() {
               alignContent: "center",
             }}
           >
-            <Link href="/" style={{ textDecoration: "none" }}>
+            <Link href="#contact-form" style={{ textDecoration: "none" }}>
               <Typography sx={{ fontWeight: "400", color: "#fff" }}>
                 Explore Start the Conversation
               </Typography>

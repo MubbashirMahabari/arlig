@@ -4,7 +4,10 @@ import "./globals.css";
 import { Providers } from "./providers";
 import Header from "@/components/header/page"; // Verify path
 import FooterComponent from "@/components/footer/page"; // Verify path
+import StaticTabTitle from "@/components/StaticTabTitle";
 import Script from "next/script";
+import GoogleAnalytics from "@/components/CookieConsent/GoogleAnalytics";
+import CookieConsentModal from "@/components/CookieConsent/CookieConsentModal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,9 +38,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-  ),
+  metadataBase: new URL("https://arligtechnologies.com"),
   alternates: {
     canonical: "/",
   },
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     title: "Arlig Technologies - Salesforce Consulting Partner",
     description:
       "Transform your business with expert Salesforce implementation, optimization, and consulting services from Arlig Technologies.",
-    url: "/",
+    url: "https://arligtechnologies.com",
     siteName: "Arlig Technologies",
     images: [
       {
@@ -94,9 +95,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Arlig Technologies",
-              url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-              logo: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-                }/assets/arlig_logo.jpg`,
+              url: "https://arligtechnologies.com",
+              logo: "https://arligtechnologies.com/assets/arlig_logo.jpg",
               sameAs: [
                 "https://twitter.com/arlig",
                 "https://www.linkedin.com/company/arlig",
@@ -111,20 +111,8 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} antialiased font-sans`}>
-        {/* Google Analytics - Replace G-XXXXXXXXXX with your actual Measurement ID */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-XXXXXXXXXX');
-          `}
-        </Script>
+        <StaticTabTitle />
+        <GoogleAnalytics gaId="G-XXXXXXXXXX" />
 
         <Providers>
           <div className="min-h-screen flex flex-col">
@@ -136,6 +124,7 @@ export default function RootLayout({
               <FooterComponent />
             </footer>
           </div>
+          <CookieConsentModal />
         </Providers>
       </body>
     </html>

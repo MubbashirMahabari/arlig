@@ -1,10 +1,12 @@
+'use client';
 import React from "react";
 import Image from "next/image";
 import BeliefImage from "../../../public/assets/about/belief_image.jpg";
 import Link from "next/link";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-
+import { useStrategyModal } from "../../context/StrategyModalContext";
 export default function Belief() {
+  const { openModal } = useStrategyModal();
   return (
     <Box sx={{ backgroundColor: "#3BAFDA0A", padding: "40px 0" }}>
       <Container maxWidth="xl">
@@ -79,8 +81,9 @@ export default function Belief() {
             </Box>
 
             <Box sx={{ mt: "24px" }}>
-              <Link href="/contact" style={{ textDecoration: "none" }}>
+              
                 <Button
+                onClick={openModal}
                   sx={{
                     width: "100%",
                     backgroundColor: "#0B1F33",
@@ -96,7 +99,7 @@ export default function Belief() {
                 >
                   Let’s Collaborate
                 </Button>
-              </Link>
+             
             </Box>
           </Box>
         </Box>

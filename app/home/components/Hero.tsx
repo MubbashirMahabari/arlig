@@ -1,10 +1,13 @@
+'use client';
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import heroImage from "../../../public/assets/home-hero.png";
 import Link from "next/link";
+import { useStrategyModal } from "../../context/StrategyModalContext";
 
 export default function Hero() {
+  const { openModal } = useStrategyModal();
   return (
     <Box
       className="hero-section"
@@ -56,10 +59,10 @@ export default function Hero() {
                 >
                   <Box
                     sx={{
-                      backgroundColor: "#0B1F33",
+                      backgroundColor: "#003366",
                       padding: "2px",
                       borderRadius: "50px",
-                      border: "#0B1F33 3px solid",
+                      border: "#003366 3px solid",
                       marginRight: { xs: "0px", md: "15px" },
                       marginBottom: { xs: "15px", md: "0px" },
                       textAlign: "center",
@@ -73,19 +76,18 @@ export default function Hero() {
                       },
                     }}
                   >
-                    <Link href="/contact" style={{ textDecoration: "none" }}>
-                      <Button
-                        sx={{
-                          textTransform: "none",
-                          color: "white",
-                          textAlign: "center",
-                          width: "100%",
-                          alignContent: "center",
-                        }}
-                      >
-                        <Typography>Schedule a Free Strategy Call</Typography>
-                      </Button>
-                    </Link>
+                    <Button
+                      onClick={openModal}
+                      sx={{
+                        textTransform: "none",
+                        color: "white",
+                        textAlign: "center",
+                        width: "100%",
+                        alignContent: "center",
+                      }}
+                    >
+                      <Typography>Schedule a Free Strategy Call</Typography>
+                    </Button>
                   </Box>
 
                   <Box

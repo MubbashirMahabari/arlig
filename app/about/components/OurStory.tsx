@@ -44,7 +44,7 @@ From our first project to our latest Salesforce implementation, our purpose has 
           sx={{
             textAlign: "center",
             padding: "10px 15px",
-            backgroundColor: "#E0E0E0",
+            backgroundColor: "#fff",
             borderRadius: "30px",
             border: "#E8E8E8 solid 1px",
             display: "inline-block",

@@ -12,7 +12,7 @@ export const navLinks: NavLink[] = [
     label: "Resources",
     children: [
       { label: "Blogs", href: "/blog" },
-      { label: "Industry", href: "/industry" },
+      { label: "Industry Solutions", href: "/industry" },
     ],
   },
   { label: "Contact", href: "/contact" },

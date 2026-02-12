@@ -57,11 +57,16 @@ export default function RecentBlog() {
                       </Typography>
                       <Typography
                         sx={{
-                          marginTop: "20px",
-                          lineHeight: "30px",
+                            marginTop: "20px",
+                          lineHeight: "32px",
                           fontWeight: 500,
                           color: "#2E2E2E",
                           fontSize: "24px",
+
+                          display: "-webkit-box",
+                          WebkitLineClamp: 3,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
                         }}
                       >
                         {item.title}

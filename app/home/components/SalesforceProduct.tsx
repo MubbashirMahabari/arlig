@@ -1,12 +1,14 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import icon_1 from "../../../public/assets/expertise/social-network.png";
-import icon_2 from "../../../public/assets/expertise/implementation.png";
-import icon_3 from "../../../public/assets/expertise/collaborate.png";
-import icon_4 from "../../../public/assets/expertise/staff-management.png";
+import icon_1 from "../../../public/assets/icons/connection.png";
+import icon_2 from "../../../public/assets/icons/cloud-service.png";
+import icon_3 from "../../../public/assets/icons/sparkle.png";
+import icon_4 from "../../../public/assets/icons/diagnostic-tool.png";
+import icon_5 from "../../../public/assets/icons/square.png";
+import icon_6 from "../../../public/assets/icons/Tableau icon.png";
 import Image from "next/image";
-import graphImage from "../../../public/assets/products/product_graph.png";
+import SalesforceGraph from "./SalesforceGraph";
 
 export default function SalesforceProduct() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -49,37 +51,37 @@ export default function SalesforceProduct() {
     {
       id: 1,
       img: icon_1,
-      title: "Sales Cloud",
+      title: "Agentforce Sales",
       desc: "Streamline your sales pipeline and close deals faster.",
     },
     {
       id: 2,
       img: icon_2,
-      title: "Service Cloud",
-      desc: "Deliver seamless customer support experiences.",
-    },
-    {
-      id: 3,
-      img: icon_2,
-      title: "Experience Cloud",
+      title: "Agentforce Service",
       desc: "Empower employees, partners, and customers with portals.",
     },
     {
-      id: 4,
-      img: icon_2,
-      title: "Tableau CRM",
+      id: 3,
+      img: icon_3,
+      title: "Agentforce Marketing",
       desc: "Turn data into actionable insights.",
     },
     {
+      id: 4,
+      img: icon_4,
+      title: "Salesforce Al",
+      desc: "Connect Salesforce with Finance, HR, Payroll, and third-party apps.",
+    },
+    {
       id: 5,
-      img: icon_2,
-      title: "Contract Lifecycle Management (CLM)",
-      desc: "Simplify contract processes from draft to sign-off.",
+      img: icon_5,
+      title: "Data cloud",
+      desc: "Connect Salesforce with Finance, HR, Payroll, and third-party apps.",
     },
     {
       id: 6,
-      img: icon_2,
-      title: "Integration",
+      img: icon_6,
+      title: "Tableau",
       desc: "Connect Salesforce with Finance, HR, Payroll, and third-party apps.",
     },
   ];
@@ -182,8 +184,8 @@ export default function SalesforceProduct() {
             </Grid>
 
             <Grid size={{ xs: 12, sm: 4, md: 6 }}>
-              <Box sx={{ width: "100%" }}>
-                <Image src={graphImage} alt="Graph" style={{ width: "100%" }} />
+              <Box sx={{ width: "100%", height: "70%" }}>
+                <SalesforceGraph />
               </Box>
             </Grid>
           </Grid>
