@@ -105,11 +105,12 @@ export default function Exprience() {
           </TabContext>
         </Box>
 
-        <Box>
+        <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           <Grid
             container
             spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
+            sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
           >
             {filteredData.slice(0, visibleCount).map((item) => (
               <Grid key={item.id} size={{ xs: 12, sm: 4, md: 4 }}>
@@ -157,7 +158,7 @@ export default function Exprience() {
                           fontSize: "24px",
 
                           display: "-webkit-box",
-                          WebkitLineClamp: 3,
+                          WebkitLineClamp: 2,
                           WebkitBoxOrient: "vertical",
                           overflow: "hidden",
                         }}
@@ -170,6 +171,11 @@ export default function Exprience() {
                           color: "#6B7280",
                           fontSize: "16px",
                           fontWeight: "400",
+
+                           display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
                         }}
                       >
                         {item.desc}

@@ -129,7 +129,7 @@ export default function Experience() {
                           fontSize: "24px",
 
                           display: "-webkit-box",
-                          WebkitLineClamp: 3,
+                          WebkitLineClamp: 2,
                           WebkitBoxOrient: "vertical",
                           overflow: "hidden",
                         }}

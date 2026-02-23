@@ -1,11 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import Image from "next/image";
 
-type Blog = {
-  img: string;
-  title: string;
-  date: string;
-};
+import { Blog } from "@/data/blogData";
 
 type HeroProps = {
   blog: Blog;

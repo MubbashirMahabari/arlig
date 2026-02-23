@@ -33,7 +33,7 @@ export default function Page() {
     <div>
       <Hero blog={blog} />
       <BlogContent blog={blog}/>
-      <RecentBlog/>
+      {/* <RecentBlog/> */}
     </div>
   );
 }
