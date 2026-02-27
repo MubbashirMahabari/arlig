@@ -127,59 +127,63 @@ export default function SalesforceProduct() {
                   msOverflowStyle: "none",
                 }}
               >
-                {product_data.map((item, idx) => (
-                  <Box
-                    key={item.id}
-                    ref={(el: HTMLDivElement | null) => {
-                      itemRefs.current[idx] = el;
-                    }}
-                    data-index={idx}
-                    sx={{
-                      gap: 2,
-                      p: 3,
-                      mb: 2,
-                      borderRadius: "16px",
-                      backgroundColor: "#F5F8FF",
-                      boxShadow: "0 2px 8px 0 rgba(59,175,218,0.05)",
-                      border: "1px solid #E3EAFD",
-                      transition: "all 0.3s",
-                      cursor: "pointer",
-                      opacity: lastVisibleIndex === idx ? 0.5 : 1,
-                      "&:hover": {
-                        transform: "scale(1.03)",
-                        boxShadow: "0 8px 24px 0 rgba(59,175,218,0.15)",
-                      },
-                    }}
-                  >
-                    <Box sx={{ mb: 2 }}>
-                      <Image
-                        src={item.img}
-                        alt={String(item.title)}
-                        width={40}
-                        height={40}
-                      />
-                    </Box>
-                    <Typography
-                      sx={{
-                        fontWeight: 700,
-                        color: lastVisibleIndex === idx ? "#A0AEC0" : "#1F4ED8",
-                        fontSize: "20px",
-                      }}
-                    >
-                      {item.title}
-                    </Typography>
+                {product_data.map((item, idx) => {
+                  const isFaded = lastVisibleIndex === idx && idx !== product_data.length - 1;
 
-                    <Typography
+                  return (
+                    <Box
+                      key={item.id}
+                      ref={(el: HTMLDivElement | null) => {
+                        itemRefs.current[idx] = el;
+                      }}
+                      data-index={idx}
                       sx={{
-                        color: lastVisibleIndex === idx ? "#CBD5E1" : "#1F2937",
-                        mt: 0.5,
-                        fontSize: "15px",
+                        gap: 2,
+                        p: 3,
+                        mb: 2,
+                        borderRadius: "16px",
+                        backgroundColor: "#F5F8FF",
+                        boxShadow: "0 2px 8px 0 rgba(59,175,218,0.05)",
+                        border: "1px solid #E3EAFD",
+                        transition: "all 0.3s",
+                        cursor: "pointer",
+                        opacity: isFaded ? 0.5 : 1,
+                        "&:hover": {
+                          transform: "scale(1.03)",
+                          boxShadow: "0 8px 24px 0 rgba(59,175,218,0.15)",
+                        },
                       }}
                     >
-                      {item.desc}
-                    </Typography>
-                  </Box>
-                ))}
+                      <Box sx={{ mb: 2 }}>
+                        <Image
+                          src={item.img}
+                          alt={String(item.title)}
+                          width={40}
+                          height={40}
+                        />
+                      </Box>
+                      <Typography
+                        sx={{
+                          fontWeight: 700,
+                          color: isFaded ? "#A0AEC0" : "#1F4ED8",
+                          fontSize: "20px",
+                        }}
+                      >
+                        {item.title}
+                      </Typography>
+
+                      <Typography
+                        sx={{
+                          color: isFaded ? "#CBD5E1" : "#1F2937",
+                          mt: 0.5,
+                          fontSize: "15px",
+                        }}
+                      >
+                        {item.desc}
+                      </Typography>
+                    </Box>
+                  )
+                })}
               </Box>
             </Grid>
 

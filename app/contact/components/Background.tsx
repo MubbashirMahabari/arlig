@@ -46,7 +46,7 @@ export default function Background() {
           >
             <EmailIcon sx={{ marginRight: "10px", color: "#2E2E2E" }} />
             <Typography sx={{ color: "#6B7280", fontSize: "16px" }}>
-              verification@arligtechnologies.com
+              info@arligtechnologies.com
             </Typography>
           </Box>
           <Box
@@ -58,7 +58,7 @@ export default function Background() {
           >
             <LocalPhoneIcon sx={{ marginRight: "10px", color: "#2E2E2E" }} />
             <Typography sx={{ color: "#6B7280", fontSize: "16px" }}>
-              +971 50 123 4567 (HR Department)
+              +91 9480251667 (HR Department)
             </Typography>
           </Box>
         </Box>

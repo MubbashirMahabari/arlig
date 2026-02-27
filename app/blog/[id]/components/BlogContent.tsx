@@ -27,7 +27,7 @@ export default function BlogContent({ blog }: HeroProps) {
             )}
           </Box>
         )}
-        <Box
+        {/* <Box
           sx={{
             marginTop: "40px",
             position: "relative",
@@ -44,7 +44,7 @@ export default function BlogContent({ blog }: HeroProps) {
             style={{ objectFit: "cover" }}
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 100vw, 1200px"
           />
-        </Box>
+        </Box> */}
         {blog.problem && (
           <Box sx={{ marginTop: "40px" }}>
             <Grid
@@ -52,7 +52,7 @@ export default function BlogContent({ blog }: HeroProps) {
               spacing={{ xs: 2, md: 3 }}
               columns={{ xs: 4, sm: 8, md: 12 }}
             >
-              <Grid size={{ xs: 12, sm: 4, md: 6 }}>
+              <Grid size={{ xs: 12, sm: 12, md: 12 }}>
                 <Box>
                   <Typography sx={{ fontSize: "36px", fontWeight: 700 }}>
                     Problem
@@ -69,8 +69,8 @@ export default function BlogContent({ blog }: HeroProps) {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid size={{ xs: 12, sm: 4, md: 6 }}>
-                <Box
+              {/* <Grid size={{ xs: 12, sm: 4, md: 6 }}> */}
+                {/* <Box
                   sx={{
                     marginTop: "40px",
                     position: "relative",
@@ -87,14 +87,14 @@ export default function BlogContent({ blog }: HeroProps) {
                     style={{ objectFit: "cover" }}
                     sizes="(max-width: 600px) 100vw, (max-width: 1200px) 100vw, 1200px"
                   />
-                </Box>
-              </Grid>
+                </Box> */}
+              {/* </Grid> */}
             </Grid>
           </Box>
         )}
 
         <Box sx={{ marginTop: "20px" }}>
-          <Box
+          {/* <Box
             sx={{
               marginTop: "40px",
               position: "relative",
@@ -111,7 +111,7 @@ export default function BlogContent({ blog }: HeroProps) {
               style={{ objectFit: "cover" }}
               sizes="(max-width: 600px) 100vw, (max-width: 1200px) 100vw, 1200px"
             />
-          </Box>
+          </Box> */}
           {blog.our_approach && (
             <Box sx={{ marginTop: "30px" }}>
               <Typography sx={{ fontSize: "36px", fontWeight: 700 }}>
@@ -216,7 +216,7 @@ export default function BlogContent({ blog }: HeroProps) {
               </Typography>
               <Typography
                 sx={{
-                  marginTop: "15px",
+                  // marginTop: "15px",
                   color: "#6B7280",
                   fontSize: "16px",
                   whiteSpace: "pre-line",

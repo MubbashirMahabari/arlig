@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Divider, Grid, Typography } from "@mui/material";
 import icon_1 from "../../../public/assets/icons/like-shapes.png";
 import icon_2 from "../../../public/assets/icons/magic-star.png";
 import icon_3 from "../../../public/assets/icons/microscope.png";
@@ -11,19 +11,21 @@ export default function Reach() {
       id: 1,
       img: icon_1,
       title: "Email Us",
-      desc: "contact@arligtechnologies.com",
+      desc_1: "info@arligtechnologies.com",
     },
     {
       id: 2,
       img: icon_2,
       title: "Visit Our Office",
-      desc: "Sharjah Research, Technology & Innovation Park, UAE",
+      desc_1: "Sharjah Research, Technology & Innovation Park, UAE",
+      desc_2: "SB One, No. 260, 9th A Main Road, 3rd Block Jayanagar, Bengaluru - 560011",
+
     },
     {
       id: 3,
       img: icon_3,
       title: "Call or WhatsApp",
-      desc: "+971 507589158 (UAE Office)",
+      desc_1: "+91 90365 89158",
     },
   ];
   return (
@@ -72,8 +74,19 @@ export default function Reach() {
                     <Typography
                       sx={{ color: "#4b5563", mt: 0.5, opacity: "0.5" }}
                     >
-                      {item.desc}
+                      {item.desc_1}
                     </Typography>
+                    {item.desc_2 && <Divider sx={{ my: 2 }} />}
+                    {item.desc_2 && (
+                      <Box>
+                        <Typography
+                          sx={{ color: "#4b5563", mt: 0.5, opacity: "0.5" }}
+                        >
+                          {item.desc_2}
+                        </Typography>
+                      </Box>
+                    )}
+
                   </Box>
                 </Box>
               </Grid>

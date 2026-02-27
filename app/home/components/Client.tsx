@@ -1,9 +1,12 @@
 import React from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
-import icon_1 from "../../../public/assets/expertise/social-network.png";
-import icon_2 from "../../../public/assets/expertise/implementation.png";
-import icon_3 from "../../../public/assets/expertise/collaborate.png";
-import icon_4 from "../../../public/assets/expertise/staff-management.png";
+import testimonial_1 from "../../../public/assets/testimonial/testi-icon-5-1.png";
+import testimonial_2 from "../../../public/assets/testimonial/testi-icon-5-2.png";
+import testimonial_3 from "../../../public/assets/testimonial/testi-icon-5-3.png";
+import testimonial_4 from "../../../public/assets/testimonial/testi-icon-2-3.png";
+import testimonial_5 from "../../../public/assets/testimonial/testi-icon-5-5.png";
+import testimonial_6 from "../../../public/assets/testimonial/testi-icon-2-1.png";
+
 import Image from "next/image";
 import XIcon from "@mui/icons-material/X";
 
@@ -11,47 +14,47 @@ export default function Client() {
   const feature_data1 = [
     {
       id: 1,
-      img: icon_1,
-      name: "Emily Parker",
-      city: "New york,USA",
-      desc: "Replex revolutionized our customer service. It's like having a dedicated team member, always ready to engage and assist our clients.",
+      img: testimonial_1,
+      name: "Meharoopan Jeganathan",
+      city: "V&N Infotech USA",
+      desc: "As a US-based company, V&N Infotech has greatly improved our legal processes thanks to Arlig Technologies' seamless DocuSign integration. Their expertise and tailored approach ensured a smooth, efficient implementation.",
     },
     {
       id: 2,
-      img: icon_2,
-      city: "New york,USA",
-      name: "David Wong",
-      desc: "As a small business owner, Replex saves me countless hours by automating repetitive tasks and ensuring timely responses.",
+      img: testimonial_2,
+      city: "Senior Level IT Professional, Toronto, Canada",
+      name: "Tahir Razak",
+      desc: "Arlig Technologies has had a profound impact on our offshore operations. Their team consistently delivers top-tier resources, driving efficiency and excellence in every project.",
     },
     {
       id: 3,
-      img: icon_2,
-      city: "New york,USA",
-      name: "Maria Rodriguez",
-      desc: "Impressed by Replex's seamless integration across platforms. It's streamlined our communication workflow and boosted efficiency.",
+      img: testimonial_3,
+      city: "CEO, Brand New Galaxy - Dubai",
+      name: "Adil Khan",
+      desc: "As a CEO, Arlig Technologies has been instrumental in transforming our decision-making process through their exceptional delivery of Tableau CRM dashboards.",
     },
   ];
   const feature_data2 = [
     {
       id: 1,
-      img: icon_3,
+      img: testimonial_4,
       city: "New york,USA",
       name: "Ahmed Ali",
       desc: "Replex exceeded our expectations. Its intuitive interface and customizable features make managing interactions effortless.",
     },
     {
       id: 2,
-      img: icon_4,
-      city: "New york,USA",
-      name: "Emily Chen",
-      desc: "With Replex, our support team handles inquiries with lightning speed, delighting customers and improving overall satisfaction.",
+      img: testimonial_5,
+      city: "Director, Lts Create LLC, USA",
+      name: "Padmaja S",
+      desc: "Arlig Technologies transformed our sales processes with their exceptional Salesforce expertise, resulting in increased productivity and revenue growth.",
     },
     {
       id: 3,
-      img: icon_4,
-      city: "New york,USA",
-      name: "Maria Santos",
-      desc: "Replex's AI capabilities are truly impressive. It understands context and responds accurately, enhancing our brand's credibility.",
+      img: testimonial_6,
+      city: "CEO, Jain Launchpad, Bengaluru, India",
+      name: "Nayaz Ahmed",
+      desc: "Arlig Technologies delivered innovative solutions that perfectly addressed our complex business needs. Their deep understanding of our processes and ability to provide efficient results truly set them apart.",
     },
   ];
 
@@ -176,10 +179,13 @@ export default function Client() {
                           gap: 1,
                         }}
                       >
-                        <Typography sx={{ fontWeight: 500, color: "#4b5563" }}>
+                        <Typography sx={{ fontWeight: 500, color: "#4b5563",display: "-webkit-box",
+                            WebkitLineClamp: 1,
+                            WebkitBoxOrient: "vertical",
+                            overflow: "hidden", }}>
                           {item.city}
                         </Typography>
-                        <Box
+                        {/* <Box
                           sx={{
                             padding: "10px",
                             borderRadius: "30px",
@@ -189,10 +195,15 @@ export default function Client() {
                           }}
                         >
                           <XIcon sx={{ color: "#6366F1" }} />
-                        </Box>
+                        </Box> */}
                       </Box>
 
-                      <Typography sx={{ color: "#4b5563", mt: "20px" }}>
+                      <Typography sx={{
+                        color: "#4b5563", mt: "20px", display: "-webkit-box",
+                        WebkitLineClamp: 4,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                      }}>
                         {item.desc}
                       </Typography>
                     </Box>
@@ -268,33 +279,43 @@ export default function Client() {
                       </Box>
 
                       <Box>
-                        <Typography sx={{ fontWeight: 700, color: "#0B1F33", fontSize:"20px" }}>
+                        <Typography sx={{ fontWeight: 700, color: "#0B1F33", fontSize: "20px" }}>
                           {item.name}
-                        </Typography>
-                         <Box
-                        sx={{
-                          display: { xs: "block", md: "flex" },
-                          justifyContent: "space-between",
-                          alignItems: "center",
-                          gap: 1,
-                        }}
-                      >
-                        <Typography sx={{ fontWeight: 500, color: "#4b5563" }}>
-                          {item.city}
                         </Typography>
                         <Box
                           sx={{
-                            padding: "10px",
-                            borderRadius: "30px",
-                            border: "#EDE9FC 2px solid",
-                            marginTop: { xs: "10px", md: "0px" },
-                            width: "50px",
+                            display: { xs: "block", md: "flex" },
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            gap: 1,
                           }}
                         >
-                          <XIcon sx={{ color: "#6366F1" }} />
+                          <Typography sx={{
+                            fontWeight: 500, color: "#4b5563", display: "-webkit-box",
+                            WebkitLineClamp: 1,
+                            WebkitBoxOrient: "vertical",
+                            overflow: "hidden",
+                          }}>
+                            {item.city}
+                          </Typography>
+                          {/* <Box
+                            sx={{
+                              padding: "10px",
+                              borderRadius: "30px",
+                              border: "#EDE9FC 2px solid",
+                              marginTop: { xs: "10px", md: "0px" },
+                              width: "50px",
+                            }}
+                          >
+                            <XIcon sx={{ color: "#6366F1" }} />
+                          </Box> */}
                         </Box>
-                      </Box>
-                        <Typography sx={{ color: "#4b5563", mt: "20px" }}>
+                        <Typography sx={{
+                          color: "#4b5563", mt: "20px", display: "-webkit-box",
+                          WebkitLineClamp: 4,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                        }}>
                           {item.desc}
                         </Typography>
                       </Box>

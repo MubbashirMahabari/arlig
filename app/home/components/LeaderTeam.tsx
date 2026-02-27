@@ -1,23 +1,25 @@
 import React from "react";
 import { Box, Container, Typography, Grid, Link } from "@mui/material";
 import Image from "next/image";
-import icon_1 from "../../../public/assets/profile/profile_1.png";
-import icon_2 from "../../../public/assets/expertise/implementation.png";
+import team_1 from "../../../public/assets/profile/profile_1.png";
+import team_2 from "../../../public/assets/profile/profile_2.png";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function LeaderTeam() {
   const team_data = [
     {
       id: 1,
-      img: icon_1,
+      img: team_1,
       name: "Sayyid Abrar",
       role: "Salesforce Practice Head",
+      link: "https://www.linkedin.com/in/sayyidabrar/"
     },
     {
       id: 2,
-      img: icon_1,
-      name: "Sayyid Abrar",
-      role: "Salesforce Practice Head",
+      img: team_2,
+      name: "Javed Akkalkot",
+      role: "Sr. Salesforce Architect",
+      link: "https://www.linkedin.com/in/javedakkalkot/"
     },
   ];
   return (
@@ -157,7 +159,9 @@ export default function LeaderTeam() {
                         width: "50px",
                       }}
                     >
-                      <LinkedInIcon sx={{ color: "#fff", fontSize: "30px" }} />
+                      <Link href={item.link}>
+                        <LinkedInIcon sx={{ color: "#fff", fontSize: "30px" }} />
+                      </Link>
                     </Box>
                   </Box>
                 </Box>

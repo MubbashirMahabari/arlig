@@ -69,7 +69,10 @@ const blogData: Blog[] = [
   `,
 
     author_bio: `
-  Mohammed Saad Patel is a Salesforce Developer at Arlig Technologies specializing in data management and automation solutions. With over 3 years of experience, he has worked on complex Salesforce projects including data deduplication, workflow optimization, and AI-driven solutions.
+    Mohammed Saad Patel
+    Salesforce Developer
+
+  -- Mohammed Saad Patel is a Salesforce Developer at Arlig Technologies specializing in data management and automation solutions. With over 3 years of experience, he has worked on complex Salesforce projects including data deduplication, workflow optimization, and AI-driven solutions.
   `,
     paragraph_1:
       "A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements. Grid systems are used to create a consistent look and feel across a website, and can help to make the layout more visually appealing and easier to navigate.If you’ve been to New York City and have walked the streets, it is easy to figure out how to get from one place to another because of the grid system that the city is built on. Just as the predictability of a city grid helps locals and tourists get around easily, so do webpage grids provide a structure that guides users and designers alike. Because of their consistent reference point, grids improve page readability and scannability and allow people to quickly get where they need to go.",
@@ -213,7 +216,7 @@ This solution streamlines workflows, eliminates repetitive manual work, and ensu
 Bibi Khuteja Pattewale  
 5x Salesforce Certified Developer  
 
-Bibi Khuteja is an accomplished Salesforce developer specializing in integrations, Lightning Web Components (LWC), and Apex development. With multiple Salesforce certifications, she focuses on building scalable automation solutions that improve business efficiency and productivity.
+-- Bibi Khuteja is an accomplished Salesforce developer specializing in integrations, Lightning Web Components (LWC), and Apex development. With multiple Salesforce certifications, she focuses on building scalable automation solutions that improve business efficiency and productivity.
   `},
   {
     id: 3,

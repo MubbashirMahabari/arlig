@@ -57,7 +57,7 @@ const industryData = [
   },
   {
     id: 9,
-    img: "/assets/icons/Retail & E-Commerce Icon.png",
+    img: "/assets/icons/retail_commerce.png",
     title: "Retail & E-Commerce",
     desc: "Delivering personalized customer experiences across all channels.",
     paragraph_1:'A leading media agency reduced campaign setup time by 60% and improved client satisfaction scores by implementing our Salesforce solution. The unified platform connected creative, media buying, and account management teams, resulting in faster approvals and better campaign performance tracking across 15+ global brands.'
