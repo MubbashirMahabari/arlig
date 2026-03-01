@@ -10,7 +10,7 @@ import React from "react";
 
 export default function HireForm() {
   return (
-    <Box sx={{ padding: "40px 0" }}>
+    <Box id='career-form' sx={{ padding: "40px 0" }}>
       <Container maxWidth="xl">
         <Box>
           <Typography
@@ -157,7 +157,7 @@ export default function HireForm() {
             </Button>
             <Box sx={{ marginTop: "20px", textAlign: "center" }}>
               <Typography sx={{ color: "#616161", fontSize: "14px" }}>
-                Or email us directly at careers@arligtechnologies.com
+                Or email us directly at info@arligtechnologies.com
               </Typography>
             </Box>
           </Box>

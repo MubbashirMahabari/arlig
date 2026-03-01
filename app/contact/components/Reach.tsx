@@ -25,7 +25,7 @@ export default function Reach() {
       id: 3,
       img: icon_3,
       title: "Call or WhatsApp",
-      desc_1: "+91 90365 89158",
+      desc_1: "+91 90365 89158 | +971 50 758 9158",
     },
   ];
   return (
@@ -55,7 +55,6 @@ export default function Reach() {
                     backgroundColor: "#fff",
                     height: "100%",
                     transition: "all 0.3s ease",
-                    cursor: "pointer",
                   }}
                 >
                   <Box sx={{ mb: 5 }}>

@@ -39,8 +39,8 @@ const feature_data2 = [
   {
     id: 2,
     img: icon_5,
-    title: "HRMS on Salesforce",
-    desc: "Payroll & employee lifecycle simplified on one platform.",
+    title: "Post Sales and Invoicing on Salesforce",
+    desc: "Seamless Transition from Sales to Finanace",
   },
   {
     id: 3,

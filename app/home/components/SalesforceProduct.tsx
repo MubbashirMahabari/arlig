@@ -51,38 +51,38 @@ export default function SalesforceProduct() {
     {
       id: 1,
       img: icon_1,
-      title: "Agentforce Sales",
+      title: "Agentic Sales",
       desc: "Streamline your sales pipeline and close deals faster.",
     },
     {
       id: 2,
       img: icon_2,
-      title: "Agentforce Service",
-      desc: "Empower employees, partners, and customers with portals.",
+      title: "Agentic Service",
+      desc: "AI-Powered Autonomous Customer Support",
     },
     {
       id: 3,
       img: icon_3,
-      title: "Agentforce Marketing",
-      desc: "Turn data into actionable insights.",
+      title: "Agentic Marketing",
+      desc: "Autonomous Marketing that converts",
     },
     {
       id: 4,
       img: icon_4,
-      title: "Salesforce Al",
-      desc: "Connect Salesforce with Finance, HR, Payroll, and third-party apps.",
+      title: "AgentForce",
+      desc: "Enterprise AI Agent Platform",
     },
     {
       id: 5,
       img: icon_5,
       title: "Data cloud",
-      desc: "Connect Salesforce with Finance, HR, Payroll, and third-party apps.",
+      desc: "Single source of Customer Truth",
     },
     {
       id: 6,
       img: icon_6,
       title: "Tableau",
-      desc: "Connect Salesforce with Finance, HR, Payroll, and third-party apps.",
+      desc: "Turn data into actionable insights.",
     },
   ];
 

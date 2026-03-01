@@ -5,7 +5,7 @@ import { Box, Container, Typography, Grid, Button, Link } from "@mui/material";
 import logo from "../../../public/assets/arlig_footer_logo.png";
 import { useStrategyModal } from "../../../app/context/StrategyModalContext";
 export default function Footer() {
-   const { openModal } = useStrategyModal();
+  const { openModal } = useStrategyModal();
 
   return (
     <Box
@@ -63,7 +63,7 @@ export default function Footer() {
           }}
         >
           <Button
-          onClick={openModal}
+            onClick={openModal}
             sx={{
               textTransform: "none",
               color: "#fff",
@@ -135,7 +135,7 @@ export default function Footer() {
                       Services
                     </Typography>
 
-                    <Link href="/" style={{ textDecoration: "none" }}>
+                    <Link href="/services" style={{ textDecoration: "none" }}>
                       <Typography
                         sx={{
                           marginTop: "10px",
@@ -152,7 +152,7 @@ export default function Footer() {
                         Salesforce Implementation
                       </Typography>
                     </Link>
-                    <Link href="/" style={{ textDecoration: "none" }}>
+                    <Link href="/services" style={{ textDecoration: "none" }}>
                       <Typography
                         sx={{
                           marginTop: "10px",
@@ -169,7 +169,7 @@ export default function Footer() {
                       </Typography>
                     </Link>
 
-                    <Link href="/" style={{ textDecoration: "none" }}>
+                    <Link href="/services" style={{ textDecoration: "none" }}>
                       <Typography
                         sx={{
                           marginTop: "10px",
@@ -215,7 +215,7 @@ export default function Footer() {
                         About Us
                       </Typography>
                     </Link>
-                    <Link href="/" style={{ textDecoration: "none" }}>
+                    <Link href="/blog" style={{ textDecoration: "none" }}>
                       <Typography
                         sx={{
                           marginTop: "10px",
@@ -267,11 +267,11 @@ export default function Footer() {
                         marginTop: "10px",
                         fontWeight: "400",
                         color: "#FFFFFF",
-                        fontSize: "14px",
+                        fontSize: "13px",
                         opacity: "0.6",
                       }}
                     >
-                      +91 7738443636
+                      +91 90365 89158 | +971 50 758 9158
                     </Typography>
 
                     <Typography
@@ -313,7 +313,7 @@ export default function Footer() {
             fontWeight: "400",
           }}
         >
-          © 2025 Arlig Technologies. All rights reserved.
+          © 2026 Arlig Technologies. All rights reserved.
         </Typography>
 
         <Link href="/" sx={{ textDecoration: "none", color: "#fff" }}>

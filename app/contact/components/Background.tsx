@@ -58,7 +58,7 @@ export default function Background() {
           >
             <LocalPhoneIcon sx={{ marginRight: "10px", color: "#2E2E2E" }} />
             <Typography sx={{ color: "#6B7280", fontSize: "16px" }}>
-              +91 9480251667 (HR Department)
+              +91 90365 89158 | +971 50 758 9158 (HR Department)
             </Typography>
           </Box>
         </Box>

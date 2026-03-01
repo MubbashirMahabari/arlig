@@ -60,7 +60,7 @@ export default function Hero() {
               alignContent: "center",
             }}
           >
-            <Link href="/" style={{ textDecoration: "none" }}>
+            <Link href="#career-form" style={{ textDecoration: "none" }}>
               <Typography sx={{ fontWeight: "400", color: "#fff" }}>
                 Explore Opportunities
               </Typography>

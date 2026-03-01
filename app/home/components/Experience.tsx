@@ -17,7 +17,7 @@ export default function Experience() {
     {
       id: 2,
       img: icon_2,
-      date: "Sunday , 1 Jan 2023",
+      date: "Wednesday , 15 March 2023",
       title:
         "Data Streamline: A Salesforce-Centric Approach to Data Deduplication",
       desc: "In a fast-paced business world, managing data efficiently is critical to ensuring smooth...",
@@ -25,7 +25,7 @@ export default function Experience() {
     {
       id: 3,
       img: icon_3,
-      date: "Sunday , 1 Jan 2023",
+      date: "Tuesday , 23 May 2023",
       title:
         "Streamlining Bulk Envelope Sending with DocuSign in Salesforce Using LWC ",
       desc: "In many business scenarios, especially in legal or financial fields, there’s often a need to get...",

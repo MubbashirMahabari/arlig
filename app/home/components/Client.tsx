@@ -35,23 +35,23 @@ export default function Client() {
     },
   ];
   const feature_data2 = [
+    // {
+    //   id: 1,
+    //   img: testimonial_4,
+    //   city: "New york,USA",
+    //   name: "Ahmed Ali",
+    //   desc: "Replex exceeded our expectations. Its intuitive interface and customizable features make managing interactions effortless.",
+    // },
     {
       id: 1,
-      img: testimonial_4,
-      city: "New york,USA",
-      name: "Ahmed Ali",
-      desc: "Replex exceeded our expectations. Its intuitive interface and customizable features make managing interactions effortless.",
-    },
-    {
-      id: 2,
-      img: testimonial_5,
+      img: '',
       city: "Director, Lts Create LLC, USA",
       name: "Padmaja S",
       desc: "Arlig Technologies transformed our sales processes with their exceptional Salesforce expertise, resulting in increased productivity and revenue growth.",
     },
     {
-      id: 3,
-      img: testimonial_6,
+      id: 2,
+      img: testimonial_5,
       city: "CEO, Jain Launchpad, Bengaluru, India",
       name: "Nayaz Ahmed",
       desc: "Arlig Technologies delivered innovative solutions that perfectly addressed our complex business needs. Their deep understanding of our processes and ability to provide efficient results truly set them apart.",
@@ -151,13 +151,31 @@ export default function Client() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <Image
-                          src={item.img}
-                          alt={String(item.name)}
-                          width={64}
-                          height={64}
-                          style={{ objectFit: "cover" }}
-                        />
+                        {item.img ? (
+                          <Image
+                            src={item.img}
+                            alt={String(item.name)}
+                            width={64}
+                            height={64}
+                            style={{ objectFit: "cover" }}
+                          />
+                        ) : (
+                          <Box
+                            sx={{
+                              width: "100%",
+                              height: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              backgroundColor: "#6366F1",
+                              color: "#fff",
+                              fontSize: "28px",
+                              fontWeight: "bold",
+                            }}
+                          >
+                            {String(item.name).charAt(0).toUpperCase()}
+                          </Box>
+                        )}
                       </Box>
                     </Box>
 
@@ -179,10 +197,12 @@ export default function Client() {
                           gap: 1,
                         }}
                       >
-                        <Typography sx={{ fontWeight: 500, color: "#4b5563",display: "-webkit-box",
-                            WebkitLineClamp: 1,
-                            WebkitBoxOrient: "vertical",
-                            overflow: "hidden", }}>
+                        <Typography sx={{
+                          fontWeight: 500, color: "#4b5563", display: "-webkit-box",
+                          WebkitLineClamp: 1,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                        }}>
                           {item.city}
                         </Typography>
                         {/* <Box
@@ -268,13 +288,31 @@ export default function Client() {
                             backgroundColor: "#fff",
                           }}
                         >
-                          <Image
-                            src={item.img}
-                            alt={String(item.name)}
-                            width={64}
-                            height={64}
-                            style={{ objectFit: "cover" }}
-                          />
+                          {item.img ? (
+                            <Image
+                              src={item.img}
+                              alt={String(item.name)}
+                              width={64}
+                              height={64}
+                              style={{ objectFit: "cover" }}
+                            />
+                          ) : (
+                            <Box
+                              sx={{
+                                width: "100%",
+                                height: "100%",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                backgroundColor: "#6366F1",
+                                color: "#fff",
+                                fontSize: "28px",
+                                fontWeight: "bold",
+                              }}
+                            >
+                              {String(item.name).charAt(0).toUpperCase()}
+                            </Box>
+                          )}
                         </Box>
                       </Box>
 
