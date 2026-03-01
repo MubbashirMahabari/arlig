@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
 import Image from "next/image";
@@ -70,7 +71,7 @@ export default function BlogContent({ blog }: HeroProps) {
                 </Box>
               </Grid>
               {/* <Grid size={{ xs: 12, sm: 4, md: 6 }}> */}
-                {/* <Box
+              {/* <Box
                   sx={{
                     marginTop: "40px",
                     position: "relative",

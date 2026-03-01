@@ -1,16 +1,21 @@
-"use client";
-import { useParams } from "next/navigation";
 import blogData from "@/data/blogData";
 import Hero from "./components/Hero";
 import BlogContent from "./components/BlogContent";
 import RecentBlog from "./components/RecentBlog";
 
-export default function Page() {
-  const params = useParams();
-  const rawId = params?.id as string | undefined;
-  const parsed = rawId
-    ? parseInt(Array.isArray(rawId) ? rawId[0] : rawId, 10)
-    : NaN;
+export async function generateStaticParams() {
+  return blogData.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const parsed = id ? parseInt(id, 10) : NaN;
 
   if (Number.isNaN(parsed)) {
     return (
@@ -32,7 +37,7 @@ export default function Page() {
   return (
     <div>
       <Hero blog={blog} />
-      <BlogContent blog={blog}/>
+      <BlogContent blog={blog} />
       {/* <RecentBlog/> */}
     </div>
   );

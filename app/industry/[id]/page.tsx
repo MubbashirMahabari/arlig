@@ -1,18 +1,19 @@
-"use client";
-import { useParams } from "next/navigation";
 import industryData from "@/data/industryData";
-import Hero from "./components/Hero";
-import Challenges from "./components/Challenges";
-import Approach from "./components/Approach";
-import Results from "./components/Results";
-import Success from "./components/Success";
+import IndustryClient from "./IndustryClient";
 
-export default function Page() {
-  const params = useParams();
-  const rawId = params?.id as string | undefined;
-  const parsed = rawId
-    ? parseInt(Array.isArray(rawId) ? rawId[0] : rawId, 10)
-    : NaN;
+export async function generateStaticParams() {
+  return industryData.map((industry) => ({
+    id: industry.id.toString(),
+  }));
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const parsed = id ? parseInt(id, 10) : NaN;
 
   if (Number.isNaN(parsed)) {
     return (
@@ -31,13 +32,5 @@ export default function Page() {
     );
   }
 
-  return (
-    <div>
-      <Hero industry={industry} />
-      <Challenges />
-      <Approach />
-      <Results />
-      <Success industry={industry} />
-    </div>
-  );
+  return <IndustryClient industry={industry} />;
 }
