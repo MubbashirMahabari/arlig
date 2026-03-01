@@ -94,9 +94,6 @@ function Navbar() {
               PaperProps={{
                 sx: {
                   width: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
                 },
               }}
             >
@@ -119,19 +116,13 @@ function Navbar() {
                           <MenuItem
                             key={child.label}
                             onClick={handleCloseNavMenu}
-                            sx={{ justifyContent: "center", pl: 4 }}
+                            sx={{ justifyContent: "center", pl: 4, textDecoration: "none", color: "inherit" }}
+                            component={Link}
+                            href={child.href}
                           >
-                            <Link
-                              href={child.href}
-                              style={{
-                                textDecoration: "none",
-                                color: "inherit",
-                              }}
-                            >
-                              <Typography fontSize="15px">
-                                {child.label}
-                              </Typography>
-                            </Link>
+                            <Typography fontSize="15px">
+                              {child.label}
+                            </Typography>
                           </MenuItem>
                         ))}
                     </Box>
@@ -143,14 +134,11 @@ function Navbar() {
                   <MenuItem
                     key={page.label}
                     onClick={handleCloseNavMenu}
-                    sx={{ justifyContent: "center" }}
+                    sx={{ justifyContent: "center", textDecoration: "none", color: "inherit" }}
+                    component={Link}
+                    href={page.href!}
                   >
-                    <Link
-                      href={page.href!}
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      <Typography fontWeight={600}>{page.label}</Typography>
-                    </Link>
+                    <Typography fontWeight={600}>{page.label}</Typography>
                   </MenuItem>
                 );
               })}

@@ -137,7 +137,7 @@ export default function CookieConsentModal({ onConsent }: ConsentModalProps) {
                                 flexDirection: { xs: "column", sm: "row" },
                                 gap: 1.5,
                                 width: { xs: "100%", md: "auto" },
-                                minWidth: "550px",
+                                minWidth: { xs: "0px", sx: "550px", md: "550px" },
                             }}
                         >
                             <Button
