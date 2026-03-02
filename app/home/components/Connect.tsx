@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { Box, Container, Typography, Grid, Button, Link } from "@mui/material";
-import connectBg from "../../../public/assets/connect_bg.png";
+import connectBg from "../../../public/assets/connect_bg.jpg";
 import { useStrategyModal } from "../../context/StrategyModalContext";
 export default function Connect() {
    const { openModal } = useStrategyModal();
