@@ -122,7 +122,7 @@ export default function ConversationForm() {
     try {
       const body = new URLSearchParams({
         oid: "00DdN00000MPh8L",
-        retURL: "http://",
+        retURL: "/",
         last_name: form.last_name,
         company: form.company,
         email: form.email,
@@ -196,7 +196,7 @@ export default function ConversationForm() {
                     <form onSubmit={handleSubmit} noValidate>
                       {/* Hidden Salesforce fields */}
                       <input type="hidden" name="oid" value="00DdN00000MPh8L" />
-                      <input type="hidden" name="retURL" value="http://" />
+                      <input type="hidden" name="retURL" value="/" />
 
                       {/* Full Name */}
                       <Box>

@@ -51,11 +51,15 @@ export default function ClientCarousel() {
     },
     breakpoints: {
       320: {
-        slidesPerView: 5,
-        spaceBetween: 20,
+        slidesPerView: 2,
+        spaceBetween: 0,
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 0,
       },
       640: {
-        slidesPerView: 5,
+        slidesPerView: 3,
         spaceBetween: 0,
       },
       1024: {
@@ -91,12 +95,12 @@ export default function ClientCarousel() {
                 <SwiperSlide key={i} className="brand-new-images">
                   <Box
                     sx={{
-                      height: { xs: "120px", md: "120px" },
+                      height: { xs: "100px", sm: "110px", md: "120px" },
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
                       borderRight: "1px solid #e0e0e0",
-                      padding: "20px",
+                      padding: { xs: "12px", sm: "16px", md: "20px" },
                     }}
                   >
                     <Image
