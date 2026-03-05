@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { getConsent, saveConsent, CookieConsent } from "@/lib/cookieUtils";
 import {
     Box,
@@ -39,7 +38,6 @@ const Transition = React.forwardRef(function Transition(
 });
 
 export default function CookieConsentModal({ onConsent }: ConsentModalProps) {
-    const router = useRouter();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -64,7 +62,8 @@ export default function CookieConsentModal({ onConsent }: ConsentModalProps) {
         setIsVisible(false);
         setShowPreferences(false);
         if (onConsent) onConsent(newConsent);
-        router.refresh();
+        // Dispatch event so GoogleAnalytics component reacts without a full page reload
+        window.dispatchEvent(new Event("cookie-consent-updated"));
     };
 
     const handleAcceptAll = () => {
