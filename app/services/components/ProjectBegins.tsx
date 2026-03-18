@@ -9,7 +9,7 @@ import {
   Typography,
   TextField,
 } from "@mui/material";
-import projectBegins from "../../../public/assets/services/project_begins.jpg";
+import projectBegins from "../../../public/assets/services/project_begins2.jpg";
 import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
 import RadioIcon from "@mui/icons-material/Radio";
 import LoopIcon from "@mui/icons-material/Loop";
